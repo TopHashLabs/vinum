@@ -12,6 +12,7 @@ declare module 'vue' {
     Counter: typeof import('./src/components/Counter.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
     Slide: typeof import('./src/components/anime/Slide.vue')['default']
+    VideoSlider: typeof import('./src/components/VideoSlider.vue')['default']
   }
 }
 

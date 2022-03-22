@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import VideoSlider from '@/components/VideoSlider.vue';
 const currentSlide = ref(0)
 const slideClasses = ref('')
 function slide(direction: 'left' | 'right'): void {
@@ -86,7 +87,7 @@ function slide(direction: 'left' | 'right'): void {
         <h1
           class="mobile:hidden text-[#fff] mt-[10%] tracking-[0.05rem] text-[2.3rem] font-bold leading-[2.5rem]"
         >
-          <span class="block">welcome to the future,</span>
+          <span class="block">Welcome to the future,</span>
           <span class="block">where the frontier between</span>
           <span class="block">real-world and metaverse assets</span> disappears.
         </h1>
@@ -358,105 +359,13 @@ function slide(direction: 'left' | 'right'): void {
       </div>
     </section>
 
-    <section class="w-full h-[35.5rem] max-h-[35.5rem] mobile:h-auto bg-accent">
+<section class="w-full h-[35.5rem] max-h-[35.5rem] mobile:h-auto bg-accent">
       <div
         class="flex w-full h-[35.5rem] max-h-[35.5rem] overflow-x-hidden relative mobile:h-auto transition-all"
       >
-        <button
-          @click="slide('left')"
-          class="flex items-center justify-center absolute left-[2%] top-[45%] transform rotate-180 w-[3rem] h-[3rem] rounded-[50%] border-[0.1rem] border-[#fff] cursor-pointer transition-all z-50 hover:border-[#d4d4d4]"
-        >
-          <img src="@/assets/images/arrow.svg" alt="arrow" />
-        </button>
-        <button
-          @click="slide('right')"
-          class="flex items-center justify-center absolute right-[2%] top-[45%] transform w-[3rem] h-[3rem] rounded-[50%] border-[0.1rem] border-[#fff] cursor-pointer transition-all z-50 hover:border-[#d4d4d4]"
-        >
-          <img src="@/assets/images/arrow.svg" alt="arrow" />
-        </button>
-        <video
-          autoplay
-          muted
-          loop
-          preload="metadata"
-          src="@/assets/videos/White Blue Compressed.mp4"
-          :style="{marginLeft: slideClasses}"
-          class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto"
-        ></video>
-        <video
-          autoplay
-          muted
-          loop
-          preload="metadata"
-          src="@/assets/videos/White Purple Compressed.mp4"
-          class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
-        ></video>
-        <video
-          autoplay
-          muted
-          loop
-          preload="metadata"
-          src="@/assets/videos/White Red Compressed.mp4"
-          class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
-        ></video>
-        <video
-          autoplay
-          muted
-          loop
-          preload="metadata"
-          src="@/assets/videos/Red Blue Compressed.mp4"
-          class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
-        ></video>
-        <video
-          autoplay
-          muted
-          loop
-          preload="metadata"
-          src="@/assets/videos/Red Purple Compressed.mp4"
-          class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
-        ></video>
-        <video
-          autoplay
-          muted
-          loop
-          preload="metadata"
-          src="@/assets/videos/Red Pink Compressed.mp4"
-          class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
-        ></video>
-        <video
-          autoplay
-          muted
-          loop
-          preload="metadata"
-          src="@/assets/videos/Rose Blue Compressed.mp4"
-          class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
-        ></video>
-        <video
-          autoplay
-          muted
-          loop
-          preload="metadata"
-          src="@/assets/videos/Rose Pink Compressed.mp4"
-          class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
-        ></video>
-        <video
-          autoplay
-          muted
-          loop
-          preload="metadata"
-          src="@/assets/videos/Rose Sparkling Compressed.mp4"
-          class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
-        ></video>
-        <video
-          autoplay
-          muted
-          loop
-          preload="metadata"
-          src="@/assets/videos/White Sparkling Compressed.mp4"
-          class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
-        ></video>
+<VideoSlider />
       </div>
-    </section>
+      </section>
 
     <section class="flex flex-col h-[100vh] w-full bg-accent pt-[2.6%] pr-[3%]">
       <div class="w-full flex h-[25%]">
