@@ -4,14 +4,10 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    AnimeSlide: typeof import('./src/components/anime/AnimeSlide.vue')['default']
     BaseButton: typeof import('./src/components/base/BaseButton.vue')['default']
     BaseIcon: typeof import('./src/components/base/BaseIcon.vue')['default']
     BaseInput: typeof import('./src/components/base/BaseInput.vue')['default']
     BaseLoadingIcon: typeof import('./src/components/base/BaseLoadingIcon.vue')['default']
-    Counter: typeof import('./src/components/Counter.vue')['default']
-    Header: typeof import('./src/components/Header.vue')['default']
-    Slide: typeof import('./src/components/anime/Slide.vue')['default']
     VideoSlider: typeof import('./src/components/VideoSlider.vue')['default']
   }
 }

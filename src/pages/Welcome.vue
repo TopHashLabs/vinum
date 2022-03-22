@@ -39,12 +39,12 @@ function slide(direction: 'left' | 'right'): void {
       class="w-full absolute top-0 left-0 z-[-5] h-[445%] mobile:object-cover"
     />
     <img
-      src="@/assets/images/Web bottle blue.png"
+      src="@/assets/images/Web-bottle-blue.png"
       alt="bottle"
       class="w-[80%] absolute top-[-55%] right-[-35%] z-[4] mobile:hidden block"
     />
     <img
-      src="@/assets/images/Web bottle red.png"
+      src="@/assets/images/Web-bottle-red.png"
       alt="bottle"
       class="hidden mobile:block mobile:w-[200%] absolute -top-1/4 right-[-80%] z-[4]"
     />
@@ -333,7 +333,7 @@ function slide(direction: 'left' | 'right'): void {
         class="flex relative w-[79%] mobile:w-[88%] h-full mobile:h-1/2 bg-accent mb-[8%]"
       >
         <img
-          src="@/assets/images/Web bottle red.png"
+          src="@/assets/images/Web-bottle-red.png"
           alt="bottle vinum"
           class="absolute w-3/4 mobile:w-[70%] top-1/4 mobile:top-[8%] transform translate-y-[-55%] ml-[-15%] mobile:ml-[-11%]"
         />
