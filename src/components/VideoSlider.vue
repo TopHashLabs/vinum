@@ -2,13 +2,13 @@
   <carousel :items-to-show="3" :autoplay="2000" :wrap-around="true">
     <slide v-for="video in videos" :key="video">
       <video
-          autoplay
-          muted
-          loop
-          preload="metadata"
-          :src="getVideo(video)"
-          class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto"
-        ></video>
+        autoplay
+        muted
+        loop
+        preload="metadata"
+        :src="getVideo(video)"
+        class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto"
+      ></video>
     </slide>
 
     <template #addons>
@@ -18,8 +18,8 @@
 </template>
 
 <script setup lang="ts">
-import 'vue3-carousel/dist/carousel.css';
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 const videos = [
   'red-blue',
   'red-pink',

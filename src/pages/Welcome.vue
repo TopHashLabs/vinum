@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import VideoSlider from '@/components/VideoSlider.vue';
+import VideoSlider from '@/components/VideoSlider.vue'
 const currentSlide = ref(0)
 const slideClasses = ref('')
 function slide(direction: 'left' | 'right'): void {
@@ -21,7 +21,6 @@ function slide(direction: 'left' | 'right'): void {
     if (currentSlide.value < 9 && direction === 'right') {
       currentSlide.value += 1
       slideClasses.value = `-${currentSlide.value * width_rem}rem`
-
     }
 
     if (currentSlide.value !== 0 && direction === 'left') {
@@ -113,11 +112,13 @@ function slide(direction: 'left' | 'right'): void {
 
     <div class="overflow-x-hidden">
       <section
-        class="relative  z-[5] flex h-[60vh] mobile:h-[53vh] mobile:mt-[17vh] pl-[2%] w-full"
+        class="relative z-[5] flex h-[60vh] mobile:h-[53vh] mobile:mt-[17vh] pl-[2%] w-full"
       >
         <div class="h-full w-[12%] mobile:w-[16.9%]"></div>
 
-        <div class="relative flex items-center h-full w-[88%] border-l-[0.12rem] border-crem bg-[#fff] px-[6%] py-0">
+        <div
+          class="relative flex items-center h-full w-[88%] border-l-[0.12rem] border-crem bg-[#fff] px-[6%] py-0"
+        >
           <span
             class="absolute top-[-24%] left-0 text-[5rem] font-bold text-[#fff] mobile:top[-7%] mobile:text-[1.4rem]"
             >WHY ARE WE HERE?</span
@@ -359,13 +360,13 @@ function slide(direction: 'left' | 'right'): void {
       </div>
     </section>
 
-<section class="w-full h-[35.5rem] max-h-[35.5rem] mobile:h-auto bg-accent">
+    <section class="w-full h-[35.5rem] max-h-[35.5rem] mobile:h-auto bg-accent">
       <div
         class="flex w-full h-[35.5rem] max-h-[35.5rem] overflow-x-hidden relative mobile:h-auto transition-all"
       >
-<VideoSlider />
+        <VideoSlider />
       </div>
-      </section>
+    </section>
 
     <section class="flex flex-col h-[100vh] w-full bg-accent pt-[2.6%] pr-[3%]">
       <div class="w-full flex h-[25%]">
