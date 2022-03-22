@@ -28,13 +28,6 @@ h2 {
   font-family: 'Poppins', sans-serif;
 }
 
-:root {
-  --accent-color: #42139b;
-  --primary-color: #fff;
-  --secondary-color: #000;
-  --border: 0.09rem #e4e4e4 solid;
-}
-
 @media all and (min-width: 1025px) {
   #app {
     font-size: 1.25vw;
@@ -53,12 +46,6 @@ h2 {
     position: relative;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
-  }
-
-  :root {
-    --accent-color: #42139b;
-    --primary-color: #fff;
-    --secondary-color: #000;
   }
 }
 </style>

@@ -38,6 +38,7 @@ specifiers:
   unplugin-auto-import: ^0.5.1
   unplugin-vue-components: ^0.17.18
   util: ^0.12.4
+  v-video-embed: ^1.0.8
   vite: ^2.7.2
   vite-plugin-pages: ^0.21.4
   vue: ^3.2.25
@@ -64,6 +65,7 @@ dependencies:
   events: 3.3.0
   process: 0.11.10
   util: 0.12.4
+  v-video-embed: 1.0.8
   vue: 3.2.31
   vue-router: 4.0.13_vue@3.2.31
 
@@ -8027,6 +8029,15 @@ packages:
     hasBin: true
     dev: false
 
+  /v-video-embed/1.0.8:
+    resolution:
+      {
+        integrity: sha512-1PyN5gSkqTB/LJDOyDm22YIUX2nx50FwV2EaWXbkR4ZyaCLBImQ3bCgMcZ3qhGtObj0Y19akzJ0u0ab4ud+bEw==
+      }
+    dependencies:
+      vue: 2.6.14
+    dev: false
+
   /v8-compile-cache/2.3.0:
     resolution:
       {
@@ -8316,6 +8327,13 @@ packages:
       typescript: 4.6.2
       vscode-vue-languageservice: 0.29.8
     dev: true
+
+  /vue/2.6.14:
+    resolution:
+      {
+        integrity: sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==
+      }
+    dev: false
 
   /vue/3.2.31:
     resolution:
