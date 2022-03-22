@@ -1,4 +1,35 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const currentSlide = ref(0)
+const slideClasses = ref('')
+function slide(direction: 'left' | 'right'): void {
+  if (window.innerWidth > 1025) {
+    if (currentSlide.value < 5 && direction === 'right') {
+      currentSlide.value += 1
+      slideClasses.value = `-${currentSlide.value * 35.2}rem`
+    }
+
+    if (currentSlide.value !== 0 && direction === 'left') {
+      currentSlide.value -= 1
+      slideClasses.value = `-${currentSlide.value * 35.2}rem`
+    }
+  } else {
+    const width = document.documentElement.clientWidth
+    const gap = 0.4 * 14
+    const width_rem = (width + gap) / 16
+
+    if (currentSlide.value < 9 && direction === 'right') {
+      currentSlide.value += 1
+      slideClasses.value = `-${currentSlide.value * width_rem}rem`
+
+    }
+
+    if (currentSlide.value !== 0 && direction === 'left') {
+      currentSlide.value -= 1
+      slideClasses.value = `-${currentSlide.value * width_rem}rem`
+    }
+  }
+}
+</script>
 
 <template>
   <div class="w-full h-screen text-[1.5vw]">
@@ -22,10 +53,10 @@
       <div class="w-[12%] mobile:w-[16%]"></div>
 
       <div
-        class="relative overflow-hidden w-[88%] mobile:w-[84%] border-l-[0.09rem] border-crem bg-header-desktop mobile:bg-header-mobile"
+        class="relative overflow-hidden w-[88%] mobile:w-[84%] border-l-[0.12rem] border-crem bg-header-desktop mobile:bg-header-mobile"
       >
         <img
-          class="absolute mobile:left-[-20%] mobile:top-[-30%] mobile:w-[400%] w-[115%] opacity-[92%] -left-[5%] -top-[43.5%] z-[-5]"
+          class="absolute mobile:left-[-20%] mobile:top-[-30%] mobile:w-[400%] w-full transform scale-110 opacity-[92%] left-0 -top-[30.5%] z-[-5]"
           src="@/assets/images/logo.svg"
           alt="logo"
         />
@@ -34,22 +65,14 @@
 
     <main class="flex w-full h-[77vh] mobile:h-[456px] pl-[2%]">
       <div
-        class="w-[12%] mobile:w-[16%] h-full border-y-[0.09rem] border-crem flex justify-center items-center relative overflow-y-hidden"
+        class="w-[12%] mobile:w-[16%] h-full border-y-[0.12rem] border-crem flex justify-center items-center relative overflow-y-hidden"
       >
         <span
           class="flex absolute transform -rotate-90 bottom-0 animate-running-text"
         >
           <div
-            class="text-3xl text-[white] text-opacity-75 w-[21rem] mobile:w-[17rem]"
-          >
-            not your typical wine
-          </div>
-          <div
-            class="text-3xl text-[white] text-opacity-75 w-[21rem] mobile:w-[17rem]"
-          >
-            not your typical wine
-          </div>
-          <div
+            v-for="idx in 3"
+            :key="idx"
             class="text-3xl text-[white] text-opacity-75 w-[21rem] mobile:w-[17rem]"
           >
             not your typical wine
@@ -58,10 +81,10 @@
       </div>
 
       <div
-        class="mobile:h-full mobile:w-[78%] mobile:pl-[8%] flex flex-col justify-center relative w-[76%] h-full border-l-[0.09rem] border-y-[0.09rem] border-crem bg-accent pl-[7%] py-0 pr-0 z-10"
+        class="mobile:h-full mobile:w-[78%] mobile:pl-[8%] flex flex-col justify-center relative w-[76%] h-full border-l-[0.12rem] border-y-[0.12rem] border-crem bg-accent pl-[7%] py-0 pr-0 z-10"
       >
         <h1
-          class="mobile:hidden text-[#fff] mt-[10%] tracking-[0.05rem] leading-[2.5rem]"
+          class="mobile:hidden text-[#fff] mt-[10%] tracking-[0.05rem] text-[2.3rem] font-bold leading-[2.5rem]"
         >
           <span class="block">welcome to the future,</span>
           <span class="block">where the frontier between</span>
@@ -84,51 +107,54 @@
 
     <div class="flex h-[35%] mobile:h-[11%] pl-[2%] w-full">
       <div class="h-full w-[12%] mobile:w-[16.8%]"></div>
-      <div class="h-full w-[88%] border-l-[0.09rem] border-crem"></div>
+      <div class="h-full w-[88%] border-l-[0.12rem] border-crem"></div>
     </div>
 
     <div class="overflow-x-hidden">
       <section
-        class="relative z-[5] flex h-[60vh] mobile:h-[53vh] mobile:mt-[17vh] pl-[2%] w-full"
+        class="relative  z-[5] flex h-[60vh] mobile:h-[53vh] mobile:mt-[17vh] pl-[2%] w-full"
       >
         <div class="h-full w-[12%] mobile:w-[16.9%]"></div>
 
-        <transition name="slide" appear>
-          <div
-            class="relative flex items-center h-full w-[88%] border-l-[0.09rem] border-crem bg-[#fff] pr-[6%] before:content-['WHY ARE WE HERE?'] before:absolute before:top-[-24%] before:text-[5rem] before:font-bold before:text-[#fff] mobile:before:top[-7%] mobile:before:left-0 mobile:before:text-[1.4rem]"
+        <div class="relative flex items-center h-full w-[88%] border-l-[0.12rem] border-crem bg-[#fff] px-[6%] py-0">
+          <span
+            class="absolute top-[-24%] left-0 text-[5rem] font-bold text-[#fff] mobile:top[-7%] mobile:text-[1.4rem]"
+            >WHY ARE WE HERE?</span
           >
-            <img
-              class="w-[7rem] mr-[-2rem] mobile:hidden"
-              src="@/assets/images/mission-text.png"
-              alt="Mission"
-            />
+          <img
+            class="w-[7rem] mr-[-2rem] mobile:hidden"
+            src="@/assets/images/mission-text.png"
+            alt="Mission"
+          />
 
-            <span class="pr-[26%] pl-[9%] mobile:pr-0 mobile:pl-[3%]">
-              <p
-                class="opacity-70 font-medium leading-[1.9rem] mobile:mt-0 mobile:text-[0.8rem] mobile:leading-[1.55rem]"
-              >
-                we are solving the interoperability between the metaverse and
-                real-world, where NFTs will represent tickets or
-                proof-of-ownership for assets in both worlds
-              </p>
-              <p
-                class="mt-[2.2rem] opacity-70 font-medium leading-[1.9rem] mobile:mt-0 mobile:text-[0.8rem] mobile:leading-[1.55rem]"
-              >
-                by pioneering the movement of real business to the metaverse. we
-                want to achieve a new way of representing a real world brand
-                with a real life product, in the new digital world.
-              </p>
-            </span>
-          </div>
-        </transition>
+          <span class="pr-[26%] pl-[9%] mobile:pr-0 mobile:pl-[3%]">
+            <p
+              class="opacity-70 font-medium leading-[1.9rem] mobile:mt-0 mobile:text-[0.8rem] mobile:leading-[1.55rem]"
+            >
+              we are solving the interoperability between the metaverse and
+              real-world, where NFTs will represent tickets or
+              proof-of-ownership for assets in both worlds
+            </p>
+            <p
+              class="mt-[2.2rem] opacity-70 font-medium leading-[1.9rem] mobile:mt-0 mobile:text-[0.8rem] mobile:leading-[1.55rem]"
+            >
+              by pioneering the movement of real business to the metaverse. we
+              want to achieve a new way of representing a real world brand with
+              a real life product, in the new digital world.
+            </p>
+          </span>
+        </div>
       </section>
-
       <section
         class="relative z-[5] flex h-[60vh] mobile:h-[50vh] w-full mt-[20%]"
       >
         <div
-          class="relative flex items-center h-full w-[88%] mobile:w-[82%] border-l-[0.09rem] border-crem bg-[#fff] pr-[6%] before:content-['WHAT’S OUR VISION?'] before:absolute before:top-[-26.5%] before:right-0 before:text-[5.6rem] before:font-bold before:text-[#fff] mobile:before:top-[-7.3%] mobile:before:right-[initial] mobile:before:left-[10%] mobile:before:text-[1.4rem]"
+          class="relative flex items-center h-full w-[88%] mobile:w-[82%] border-l-[0.12rem] border-crem bg-[#fff] px-[6%]"
         >
+          <span
+            class="absolute top-[-26.5%] right-0 text-[5.6rem] font-bold text-[#fff] mobile:top-[-7.3%] mobile:right-[initial] mobile:left-[10%] mobile:text-[1.4rem]"
+            >WHAT’S OUR VISION?</span
+          >
           <span class="mr-[5%] ml-[23%] mobile:ml-[5%]">
             <p
               class="opacity-70 font-medium leading-[1.9rem] mobile:text-[0.8rem] mobile:leading-[1.55rem]"
@@ -160,8 +186,12 @@
         <div class="h-full w-[12%] mobile:h-[16%]"></div>
 
         <div
-          class="relative flex items-center h-full w-[88%] border-l-[0.09rem] border-crem bg-[#fff] pr-[6%] before:content-['WHAT IS OUR PASSION?'] before:absolute before:top-[-23.2%] before:left-0 before:text-[5rem] before:font-bold before:text-[#fff] mobile:before:top-[5.5%] mobile:before:text-[1.4rem]"
+          class="relative flex items-center h-full w-[88%] border-l-[0.12rem] border-crem bg-[#fff] pl-[6%] pt-0"
         >
+          <span
+            class="absolute top-[-23.2%] left-0 text-[5rem] font-bold text-[#fff] mobile:top-[5.5%] mobile:text-[1.4rem]"
+            >WHAT IS OUR PASSION?</span
+          >
           <img
             class="w-[7rem] mobile:hidden"
             src="@/assets/images/wine-text.png"
@@ -205,22 +235,12 @@
           alt='Q4"21'
         />
 
-        <ul class="mt-[1rem]">
-          <li
-            class="mt-[0.5rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem]"
-          >
-            - Concept was born
-          </li>
-          <li
-            class="mt-[0.5rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem]"
-          >
-            - NFT project design
-          </li>
-          <li
-            class="mt-[0.5rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem]"
-          >
-            - Web developement
-          </li>
+        <ul
+          class="mt-[1rem] space-y-[0.5rem] list-dash text-[#525252] text-[0.95rem] mobile:text-[0.85rem]"
+        >
+          <li>Concept was born</li>
+          <li>NFT project design</li>
+          <li>Web developement</li>
         </ul>
       </div>
 
@@ -231,22 +251,14 @@
           alt='Q1"22'
         />
 
-        <ul class="mt-[1rem]">
-          <li>- Mint</li>
-          <li
-            class="mt-[0.5rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem]"
-          >
-            - DAO creation
-          </li>
-          <li
-            class="mt-[0.5rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem]"
-          >
-            - NFT staking
-          </li>
-          <li
-            class="mt-[0.5rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem]"
-          >
-            - Wine initial production phase Real-life storage creation
+        <ul
+          class="mt-[1rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem] list-dash space-y-[0.5rem"
+        >
+          <li>Mint</li>
+          <li>DAO creation</li>
+          <li>NFT staking</li>
+          <li>
+            Wine initial production phase Real-life storage creation
             commencement
           </li>
         </ul>
@@ -259,22 +271,12 @@
           alt='Q2"22'
         />
 
-        <ul class="mt-[1rem]">
-          <li
-            class="mt-[0.5rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem]"
-          >
-            - Wine follow up phases and finalization, including design
-          </li>
-          <li
-            class="mt-[0.5rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem]"
-          >
-            - Real-life storage completion
-          </li>
-          <li
-            class="mt-[0.5rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem]"
-          >
-            - Connecting NFT staking with real life storage
-          </li>
+        <ul
+          class="mt-[1rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem] list-dash space-y-[0.5rem"
+        >
+          <li>Wine follow up phases and finalization, including design</li>
+          <li>Real-life storage completion</li>
+          <li>Connecting NFT staking with real life storage</li>
         </ul>
       </div>
 
@@ -285,22 +287,12 @@
           alt='Q3"22'
         />
 
-        <ul class="mt-[1rem]">
-          <li
-            class="mt-[0.5rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem]"
-          >
-            - DAO decision-making begins onwards
-          </li>
-          <li
-            class="mt-[0.5rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem]"
-          >
-            - Next year harvest season planning
-          </li>
-          <li
-            class="mt-[0.5rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem]"
-          >
-            - Metaverse shop development proposal(s) initiation
-          </li>
+        <ul
+          class="mt-[1rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem] list-dash space-y-[0.5rem"
+        >
+          <li>DAO decision-making begins onwards</li>
+          <li>Next year harvest season planning</li>
+          <li>Metaverse shop development proposal(s) initiation</li>
         </ul>
       </div>
 
@@ -311,17 +303,11 @@
           alt='Q4"22'
         />
 
-        <ul class="mt-[1rem]">
-          <li
-            class="mt-[0.5rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem]"
-          >
-            - NFT mint - funding round
-          </li>
-          <li
-            class="mt-[0.5rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem]"
-          >
-            - Production phase restarts as in the previous cycle
-          </li>
+        <ul
+          class="mt-[1rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem] list-dash space-y-[0.5rem"
+        >
+          <li>NFT mint - funding round</li>
+          <li>Production phase restarts as in the previous cycle</li>
         </ul>
       </div>
 
@@ -347,7 +333,7 @@
         <img
           src="@/assets/images/Web bottle red.png"
           alt="bottle vinum"
-          class="absolute w-3/4 mobile:w-[70%] top-1/4 mobile:top-[8%] transform translate-y-[-15%] ml-[-15%] mobile:ml-[-11%]"
+          class="absolute w-3/4 mobile:w-[70%] top-1/4 mobile:top-[8%] transform translate-y-[-55%] ml-[-15%] mobile:ml-[-11%]"
         />
 
         <div class="flex flex-col justify-center ml-[38%] mobile:ml-[5%]">
@@ -357,31 +343,15 @@
             GENESIS NFT <span style="display: block">COLLECTION</span>
           </h2>
 
-          <ul class="list-none">
-            <li
-              class="text-[#fff] opacity-80 font-light text-[1rem] mt-[1.5rem]"
-            >
-              - Harvest year 2021
-            </li>
-            <li
-              class="text-[#fff] opacity-80 font-light text-[1rem] mt-[0.5rem]"
-            >
-              - Total supply 10,000
-            </li>
-            <li
-              class="text-[#fff] opacity-80 font-light text-[1rem] mt-[0.5rem]"
-            >
-              - 10 wine types, 1000 editions each
-            </li>
-            <li
-              class="text-[#fff] opacity-80 font-light text-[1rem] mt-[0.5rem]"
-            >
-              - Public sale details - TBD
-            </li>
-            <li
-              class="text-[#fff] opacity-80 font-light text-[1rem] mt-[0.5rem] mobile:mb-[2rem]"
-            >
-              - The NFTs having voting rights embeded
+          <ul
+            class="list-dash text-[#fff] opacity-80 font-light text-[1rem] space-y-[0.5rem] mt-[1.5rem]"
+          >
+            <li>Harvest year 2021</li>
+            <li>Total supply 10,000</li>
+            <li>10 wine types, 1000 editions each</li>
+            <li>Public sale details - TBD</li>
+            <li class="mobile:mb-[2rem]">
+              The NFTs having voting rights embeded
             </li>
           </ul>
         </div>
@@ -390,66 +360,108 @@
 
     <section class="w-full h-[35.5rem] max-h-[35.5rem] mobile:h-auto bg-accent">
       <div
-        class="flex w-full h-[35.5rem] max-h-[35.5rem] overflow-x-hidden relative mobile:h-auto"
+        class="flex w-full h-[35.5rem] max-h-[35.5rem] overflow-x-hidden relative mobile:h-auto transition-all"
       >
-        <div
+        <button
+          @click="slide('left')"
           class="flex items-center justify-center absolute left-[2%] top-[45%] transform rotate-180 w-[3rem] h-[3rem] rounded-[50%] border-[0.1rem] border-[#fff] cursor-pointer transition-all z-50 hover:border-[#d4d4d4]"
         >
           <img src="@/assets/images/arrow.svg" alt="arrow" />
-        </div>
-        <div
+        </button>
+        <button
+          @click="slide('right')"
           class="flex items-center justify-center absolute right-[2%] top-[45%] transform w-[3rem] h-[3rem] rounded-[50%] border-[0.1rem] border-[#fff] cursor-pointer transition-all z-50 hover:border-[#d4d4d4]"
         >
           <img src="@/assets/images/arrow.svg" alt="arrow" />
-        </div>
-
+        </button>
         <video
+          autoplay
+          muted
+          loop
+          preload="metadata"
           src="@/assets/videos/White Blue Compressed.mp4"
+          :style="{marginLeft: slideClasses}"
           class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto"
         ></video>
         <video
+          autoplay
+          muted
+          loop
+          preload="metadata"
           src="@/assets/videos/White Purple Compressed.mp4"
           class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
         ></video>
         <video
+          autoplay
+          muted
+          loop
+          preload="metadata"
           src="@/assets/videos/White Red Compressed.mp4"
           class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
         ></video>
         <video
+          autoplay
+          muted
+          loop
+          preload="metadata"
           src="@/assets/videos/Red Blue Compressed.mp4"
           class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
         ></video>
         <video
+          autoplay
+          muted
+          loop
+          preload="metadata"
           src="@/assets/videos/Red Purple Compressed.mp4"
           class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
         ></video>
         <video
+          autoplay
+          muted
+          loop
+          preload="metadata"
           src="@/assets/videos/Red Pink Compressed.mp4"
           class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
         ></video>
         <video
+          autoplay
+          muted
+          loop
+          preload="metadata"
           src="@/assets/videos/Rose Blue Compressed.mp4"
           class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
         ></video>
         <video
+          autoplay
+          muted
+          loop
+          preload="metadata"
           src="@/assets/videos/Rose Pink Compressed.mp4"
           class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
         ></video>
         <video
+          autoplay
+          muted
+          loop
+          preload="metadata"
           src="@/assets/videos/Rose Sparkling Compressed.mp4"
           class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
         ></video>
         <video
+          autoplay
+          muted
+          loop
+          preload="metadata"
           src="@/assets/videos/White Sparkling Compressed.mp4"
           class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto ml-[0.4rem]"
         ></video>
       </div>
     </section>
 
-    <section class="flex flex-col h-100vh w-full bg-accent pt-[2.6%] pr-[3%]">
+    <section class="flex flex-col h-[100vh] w-full bg-accent pt-[2.6%] pr-[3%]">
       <div class="w-full flex h-[25%]">
         <div
-          class="w-[88%] mobile:w-[98%] border-r-[0.09rem] border-crem"
+          class="w-[88%] mobile:w-[98%] border-r-[0.12rem] border-crem"
         ></div>
         <div class="w-[12%]"></div>
       </div>
@@ -472,20 +484,20 @@
               that is limited in production
             </li>
             <li
-              class="list-dash opacity-[89%] leading-[1.8rem] mobile:text-[0.8rem] mobile:mt-[1.5rem]"
+              class="list-dash opacity-[89%] leading-[1.8rem] mobile:text-[0.8rem] mt-[1.5rem]"
             >
               NFT Staking = Wine storage, which increases the wine value and
               gives the owner a special discount for the upcoming year harvest
               mints if held over specific time period
             </li>
             <li
-              class="list-dash opacity-[89%] leading-[1.8rem] mobile:text-[0.8rem] mobile:mt-[1.5rem]"
+              class="list-dash opacity-[89%] leading-[1.8rem] mobile:text-[0.8rem] mt-[1.5rem]"
             >
               NFT Burn = the owner is delivered his unique and exclusive wine
               bottle right to his door
             </li>
             <li
-              class="list-dash opacity-[89%] leading-[1.8rem] mobile:text-[0.8rem] mobile:mt-[1.5rem]"
+              class="list-dash opacity-[89%] leading-[1.8rem] mobile:text-[0.8rem] mt-[1.5rem]"
             >
               NFT = DAO voting interest. Future vital decisions will be taken by
               the DAO and future proposal will be considered by them.
@@ -499,18 +511,17 @@
           </h2>
         </div>
         <div
-          class="w-[12%] h-[100%] border-y-[0.09rem] border-crem bg-holder"
+          class="w-[12%] h-[100%] border-y-[0.12rem] border-crem bg-holder transform rotate-180"
         ></div>
       </div>
     </section>
 
     <section class="flex w-full h-[104vh] bg-accent mobile:h-[60vh]">
       <div
-        class="relative w-[15%] h-full bg-holder mobile:hidden mobile:bg-none before:content-[''] before:absolute before:w-full before:h-[0.05rem] bg-[#fff] top-[14%] right-[-40%] after:content-[''] after:absolute after:w-full after:h-[14%] after:top-0 after:bg-accent mobile:break-before-all"
+        class="relative w-[15%] h-full bg-holder mobile:hidden mobile:bg-none before:absolute before:w-full before:h-[0.05rem] before:bg-[#fff] before:top-[14%] before:right-[-40%] after:content-[''] after:absolute after:w-full after:h-[14%] after:top-0 after:bg-accent mobile:break-before-all"
       ></div>
-
       <div
-        class="flex flex-col items-center justify-center w-[73%] h-full border-x-[0.09rem] border-crem pt-[7%] mobile:w-full mobile:border-none"
+        class="flex flex-col items-center justify-center w-[73%] h-full border-x-[0.12rem] border-crem pt-[7%] mobile:w-full mobile:border-none"
       >
         <h2 class="text-[#fff] text-[3rem] font-bold mobile-[1.5rem]">
           ALLOCATION OF FUNDS
@@ -524,13 +535,13 @@
       </div>
 
       <div
-        class="relative w-[15%] h-full bg-holder mobile:hidden mobile:bg-none before:content-[''] before:absolute before:w-full before:h-[0.05rem] bg-[#fff] top-[14%] right-[-40%] after:content-[''] after:absolute after:w-full after:h-[14%] after:top-0 after:bg-accent mobile:break-before-all mobile:break-after-all"
+        class="relative transform rotate-180 w-[15%] h-full bg-holder mobile:hidden mobile:bg-none before:content-[''] before:absolute before:w-full before:h-[0.05rem] before:bg-[#fff] before:top-[14%] before:right-[-40%] after:content-[''] after:absolute after:w-full after:h-[14%] after:top-0 after:bg-accent mobile:break-before-all mobile:break-after-all"
       ></div>
     </section>
 
     <section class="flex w-full h-[37vh] bg-accent mobile:h-[60vh]">
       <div
-        class="relative w-[29.8%] h-full bg-holder border-r-[0.09rem] border-crem after:content-[''] after:absolute after:w-[71%] after:h-[0.05rem] bg-[#fff] after:bottom-0 after:right-0"
+        class="relative w-[29.8%] h-full bg-holder border-r-[0.12rem] border-crem after:content-[''] after:absolute after:w-[71%] after:h-[0.05rem] bg-[#fff] after:bottom-0 after:right-0"
       ></div>
 
       <div
@@ -555,20 +566,20 @@
     </section>
 
     <div class="flex w-full h-[14vh] bg-accent">
-      <div class="w-[14.65%] border-r-[0.09rem] border-crem"></div>
+      <div class="w-[14.65%] border-r-[0.12rem] border-crem"></div>
     </div>
 
     <div class="flex w-full h-[14vh]">
-      <div class="w-[14.65%] border-r-[0.09rem] border-crem"></div>
+      <div class="w-[14.65%] border-r-[0.12rem] border-accent"></div>
     </div>
 
     <section class="flex w-full h-[83vh] pl-[4%] mobile:h-[70vh]">
       <div
-        class="w-[12.6%] border-accent border-t-[0.09rem] border-r-[0.09rem] bg-holder mt-[-0.04%]"
+        class="w-[12.6%] border-accent border-t-[0.12rem] border-r-[0.12rem] bg-holder mt-[-0.04%]"
       ></div>
 
       <div
-        class="flex flex-col justify-center w-full h-full border-t-[0.09rem] border-accent pl-[7.5%]"
+        class="flex flex-col justify-center w-full h-full border-t-[0.12rem] border-accent pl-[7.5%]"
       >
         <h2
           class="text-accent text-[4.5rem] font-bold mobile:mt-0 mobile:text-[1.7rem]"
@@ -640,15 +651,4 @@
   </div>
 </template>
 
-<style>
-.slide-leave-active,
-.slide-enter-active {
-  transition: 1s;
-}
-.slide-enter {
-  transform: translate(100%, 0);
-}
-.slide-leave-to {
-  transform: translate(-100%, 0);
-}
-</style>
+<style></style>
