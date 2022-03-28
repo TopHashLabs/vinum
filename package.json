@@ -5,6 +5,7 @@
     "dev": "vite",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "format": "prettier .  --write --ignore-path .gitignore",
+    "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install",
     "build": "node add-ts-nocheck && vue-tsc --noEmit --skipLibCheck && vite build",
     "preview": "vite preview"
   },
