@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="w-full h-screen text-[1.5vw]">
@@ -77,12 +76,13 @@
 
     <div class="flex h-[35%] mobile:h-[11%] pl-[2%] w-full z-[-55]">
       <div class="h-full w-[12%] mobile:w-[16.8%]"></div>
-      <div class="h-full w-[88%] border-l-[0.12rem] border-crem pt-[12%] mobile:pt-[-7%]">
-
-      <span
-            class=" mobile:hidden mobile:absolute ml-[5%] text-[5rem] text-left font-bold text-[#fff] mobile:text-[1.4rem]"
-            >WHY ARE WE HERE?</span
-          >
+      <div
+        class="h-full w-[88%] border-l-[0.12rem] border-crem pt-[12%] mobile:pt-[-7%]"
+      >
+        <span
+          class="mobile:hidden mobile:absolute ml-[5%] text-[5rem] text-left font-bold text-[#fff] mobile:text-[1.4rem]"
+          >WHY ARE WE HERE?</span
+        >
       </div>
     </div>
 
@@ -90,13 +90,12 @@
       <section
         class="relative z-[5] flex h-[60vh] mobile:h-[53vh] mobile:mt-[17vh] pl-[2%] w-full"
       >
-          
         <div class="h-full w-[12%] mobile:w-[16.9%]"></div>
 
         <div
           class="relative flex items-center h-full w-[88%] border-l-[0.12rem] border-crem bg-[#fff] px-[6%] py-0"
         >
-        <span
+          <span
             class="absolute desktop:hidden top-[-7%] text-[5rem] text-left font-bold text-[#fff] mobile:text-[1.4rem]"
             >WHY ARE WE HERE?</span
           >
@@ -337,7 +336,7 @@
       </div>
     </section>
     <section class="bg-accent">
-    <VideoSlider />
+      <VideoSlider />
     </section>
 
     <section class="flex flex-col h-[100vh] w-full bg-accent pt-[2.6%] pr-[3%]">
