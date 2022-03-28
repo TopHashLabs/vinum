@@ -1,19 +1,15 @@
 <template>
-  <carousel :items-to-show="3" :autoplay="2000" :wrap-around="true">
-    <slide v-for="video in videos" :key="video">
+  <carousel :items-to-show="itemsToShow" :autoplay="2000" :wrap-around="true">
+    <slide  v-for="video in videos" :key="video">
       <video
         autoplay
         muted
         loop
         preload="metadata"
         :src="getVideo(video)"
-        class="h-[35.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto"
+        class="h-[40.5rem] transition-all cursor-pointer mobile:w-[100vw] mobile:h-auto"
       ></video>
     </slide>
-
-    <template #addons>
-      <navigation />
-    </template>
   </carousel>
 </template>
 
@@ -39,4 +35,6 @@ function getVideo(name) {
 
   return new URL(`../assets/videos/${name}.mp4`, import.meta.url).href
 }
+const itemsToShow = ref(3)
+window.innerWidth > 480 ? itemsToShow.value = 3 : itemsToShow.value = 1
 </script>
