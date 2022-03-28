@@ -1,34 +1,4 @@
 <script setup lang="ts">
-import VideoSlider from '@/components/VideoSlider.vue'
-const currentSlide = ref(0)
-const slideClasses = ref('')
-function slide(direction: 'left' | 'right'): void {
-  if (window.innerWidth > 1025) {
-    if (currentSlide.value < 5 && direction === 'right') {
-      currentSlide.value += 1
-      slideClasses.value = `-${currentSlide.value * 35.2}rem`
-    }
-
-    if (currentSlide.value !== 0 && direction === 'left') {
-      currentSlide.value -= 1
-      slideClasses.value = `-${currentSlide.value * 35.2}rem`
-    }
-  } else {
-    const width = document.documentElement.clientWidth
-    const gap = 0.4 * 14
-    const width_rem = (width + gap) / 16
-
-    if (currentSlide.value < 9 && direction === 'right') {
-      currentSlide.value += 1
-      slideClasses.value = `-${currentSlide.value * width_rem}rem`
-    }
-
-    if (currentSlide.value !== 0 && direction === 'left') {
-      currentSlide.value -= 1
-      slideClasses.value = `-${currentSlide.value * width_rem}rem`
-    }
-  }
-}
 </script>
 
 <template>
@@ -46,17 +16,17 @@ function slide(direction: 'left' | 'right'): void {
     <img
       src="@/assets/images/Web-bottle-red.png"
       alt="bottle"
-      class="hidden mobile:block mobile:w-[200%] absolute -top-1/4 right-[-80%] z-[4]"
+      class="hidden mobile:block absolute top-[10%] left-[40%] transfrom scale-[2.5] z-[4]"
     />
 
     <header class="flex w-full h-[30%] mobile:h-[27%] pl-[2%]">
       <div class="w-[12%] mobile:w-[16%]"></div>
 
       <div
-        class="relative overflow-hidden w-[88%] mobile:w-[84%] border-l-[0.12rem] border-crem bg-header-desktop mobile:bg-header-mobile"
+        class="relative overflow-hidden w-[88%] mobile:w-[84%] border-l-[0.12rem] border-crem bg-header-desktop bg-header-mobile"
       >
         <img
-          class="absolute mobile:left-[-20%] mobile:top-[-30%] mobile:w-[400%] w-full transform scale-110 opacity-[92%] left-0 -top-[30.5%] z-[-5]"
+          class="absolute mobile:left-[140%] mobile:top-0 transform mobile:scale-[4] w-full scale-110 opacity-[92%] left-0 -top-[30.5%] z-[-5]"
           src="@/assets/images/logo.svg"
           alt="logo"
         />
@@ -73,7 +43,7 @@ function slide(direction: 'left' | 'right'): void {
           <div
             v-for="idx in 3"
             :key="idx"
-            class="text-3xl text-[white] text-opacity-75 w-[21rem] mobile:w-[17rem]"
+            class="text-3xl text-[#fff] text-opacity-75 w-[21rem]"
           >
             not your typical wine
           </div>
@@ -105,22 +75,29 @@ function slide(direction: 'left' | 'right'): void {
       </div>
     </main>
 
-    <div class="flex h-[35%] mobile:h-[11%] pl-[2%] w-full">
+    <div class="flex h-[35%] mobile:h-[11%] pl-[2%] w-full z-[-55]">
       <div class="h-full w-[12%] mobile:w-[16.8%]"></div>
-      <div class="h-full w-[88%] border-l-[0.12rem] border-crem"></div>
+      <div class="h-full w-[88%] border-l-[0.12rem] border-crem pt-[12%] mobile:pt-[-7%]">
+
+      <span
+            class=" mobile:hidden mobile:absolute ml-[5%] text-[5rem] text-left font-bold text-[#fff] mobile:text-[1.4rem]"
+            >WHY ARE WE HERE?</span
+          >
+      </div>
     </div>
 
-    <div class="overflow-x-hidden">
+    <div class="overflow-x-hidden relative">
       <section
         class="relative z-[5] flex h-[60vh] mobile:h-[53vh] mobile:mt-[17vh] pl-[2%] w-full"
       >
+          
         <div class="h-full w-[12%] mobile:w-[16.9%]"></div>
 
         <div
           class="relative flex items-center h-full w-[88%] border-l-[0.12rem] border-crem bg-[#fff] px-[6%] py-0"
         >
-          <span
-            class="absolute top-[-24%] left-0 text-[5rem] font-bold text-[#fff] mobile:top[-7%] mobile:text-[1.4rem]"
+        <span
+            class="absolute desktop:hidden top-[-7%] text-[5rem] text-left font-bold text-[#fff] mobile:text-[1.4rem]"
             >WHY ARE WE HERE?</span
           >
           <img
@@ -191,7 +168,7 @@ function slide(direction: 'left' | 'right'): void {
           class="relative flex items-center h-full w-[88%] border-l-[0.12rem] border-crem bg-[#fff] pl-[6%] pt-0"
         >
           <span
-            class="absolute top-[-23.2%] left-0 text-[5rem] font-bold text-[#fff] mobile:top-[5.5%] mobile:text-[1.4rem]"
+            class="absolute top-[-23.2%] left-0 text-[5rem] font-bold text-[#fff] mobile:top-[-5.5%] mobile:text-[1.4rem]"
             >WHAT IS OUR PASSION?</span
           >
           <img
@@ -316,7 +293,7 @@ function slide(direction: 'left' | 'right'): void {
       <img
         src="@/assets/images/roadmap.png"
         alt="leaves"
-        class="absolute right-0 top-0 h-full mobile:right-[-75%] mobile:top-[-10%] mobile:w-[144%]"
+        class="absolute right-0 top-0 h-full mobile:right-[-50%] mobile:top-[-10%] mobile:w-[144%]"
       />
     </section>
 
@@ -325,7 +302,7 @@ function slide(direction: 'left' | 'right'): void {
     >
       <img
         src="@/assets/images/slogan.svg"
-        class="w-full h-[82vh] mobile:v-[initial] mt-[-2.5%] mr-0 z-[-5]"
+        class="w-full h-[82vh] mobile:h-[32vh] mt-[-2.5%] mr-0 z-[-5]"
         alt="not your typical wine"
       />
 
@@ -335,7 +312,7 @@ function slide(direction: 'left' | 'right'): void {
         <img
           src="@/assets/images/Web-bottle-red.png"
           alt="bottle vinum"
-          class="absolute w-3/4 mobile:w-[70%] top-1/4 mobile:top-[8%] transform translate-y-[-55%] ml-[-15%] mobile:ml-[-11%]"
+          class="absolute w-3/4 mobile:w-[70%] top-1/4 mobile:top-[8%] transform translate-y-[-55%] ml-[-15%] mobile:ml-[-10%]"
         />
 
         <div class="flex flex-col justify-center ml-[38%] mobile:ml-[5%]">
@@ -346,7 +323,7 @@ function slide(direction: 'left' | 'right'): void {
           </h2>
 
           <ul
-            class="list-dash text-[#fff] opacity-80 font-light text-[1rem] space-y-[0.5rem] mt-[1.5rem]"
+            class="list-dash text-[#fff] opacity-80 font-light text-[1rem] space-y-[0.5rem] mt-[1.5rem] mobile:p-2 mobile:mt-[3.5rem]"
           >
             <li>Harvest year 2021</li>
             <li>Total supply 10,000</li>
@@ -359,13 +336,8 @@ function slide(direction: 'left' | 'right'): void {
         </div>
       </div>
     </section>
-
-    <section class="w-full h-[35.5rem] max-h-[35.5rem] mobile:h-auto bg-accent">
-      <div
-        class="flex w-full h-[35.5rem] max-h-[35.5rem] overflow-x-hidden relative mobile:h-auto transition-all"
-      >
-        <VideoSlider />
-      </div>
+    <section class="bg-accent">
+    <VideoSlider />
     </section>
 
     <section class="flex flex-col h-[100vh] w-full bg-accent pt-[2.6%] pr-[3%]">
@@ -378,7 +350,7 @@ function slide(direction: 'left' | 'right'): void {
 
       <div class="flex w-full h-full">
         <div
-          class="flex items-center w-[88%] mobile:w-[96%] h-full bg-[#fff] pr-[5%] pl-[23%] mobile:pt-[5%] mobile:pl-[15%]"
+          class="flex items-center w-[88%] mobile:w-[96%] h-full bg-[#fff] pr-[5%] pl-[23%] mobile:flex-col mobile:pt-[5%] mobile:pl-[15%]"
         >
           <h2 class="hidden mobile:block text-accent font-bold text-[1.7rem]">
             NFT HOLDER
@@ -433,7 +405,7 @@ function slide(direction: 'left' | 'right'): void {
       <div
         class="flex flex-col items-center justify-center w-[73%] h-full border-x-[0.12rem] border-crem pt-[7%] mobile:w-full mobile:border-none"
       >
-        <h2 class="text-[#fff] text-[3rem] font-bold mobile-[1.5rem]">
+        <h2 class="text-[#fff] text-[3rem] font-bold mobile:text-[1.5rem]">
           ALLOCATION OF FUNDS
         </h2>
 
