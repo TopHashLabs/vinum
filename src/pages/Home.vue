@@ -37,7 +37,7 @@ async function mint(): Promise<void> {
       class="grid grid-cols-12 mobile:grid-cols-9 gap-y-4 absolute bottom-[24px] inset-x-0"
     >
       <div
-        class="col-end-8 col-span-2 mobile:col-span-3 mobile:col-end-7 bg-[black] bg-opacity-25 rounded-full text-[#fff] text-xl mobile:text-xs py-4 px-4 text-center"
+        class="col-end-8 col-span-2 mobile:col-span-3 mobile:col-end-7 bg-[black] bg-opacity-25 rounded-full text-[#fff] text-xl mobile:text-xs p-4 mobile:p-2 text-center"
       >
         {{ `${contract.totalMinted} / ${contract.totalSupply}` }} Minted
       </div>
