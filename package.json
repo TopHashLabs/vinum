@@ -5,7 +5,7 @@
     "dev": "vite",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "format": "prettier .  --write --ignore-path .gitignore",
-    "build": "vue-tsc --noEmit --skipLibCheck && vite build",
+    "build": "node add-ts-nocheck && vue-tsc --noEmit --skipLibCheck && vite build",
     "preview": "vite preview"
   },
   "dependencies": {

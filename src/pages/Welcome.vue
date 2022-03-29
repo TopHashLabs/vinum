@@ -398,7 +398,7 @@ roadmap5.from('#roadmap_section5', { y: '32%', duration: 0.88, opacity: 0 });
       </div>
     </section>
     <section class="bg-accent">
-    <VideoSlider />
+      <VideoSlider />
     </section>
 
     <section class="flex flex-col h-[100vh] w-full bg-accent pt-[2.6%] pr-[3%]">
