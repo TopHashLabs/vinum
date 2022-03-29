@@ -8,8 +8,9 @@ declare module 'vue' {
     BaseIcon: typeof import('./src/components/base/BaseIcon.vue')['default']
     BaseInput: typeof import('./src/components/base/BaseInput.vue')['default']
     BaseLoadingIcon: typeof import('./src/components/base/BaseLoadingIcon.vue')['default']
+    ConnectWallet: typeof import('./src/components/ConnectWallet.vue')['default']
     VideoSlider: typeof import('./src/components/VideoSlider.vue')['default']
   }
 }
 
-export { }
+export {}

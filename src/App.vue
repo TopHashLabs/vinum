@@ -1,11 +1,4 @@
-<script setup lang="ts">
-import { useWeb3 } from '@/composables/useWeb3'
-
-const { web3, handleLogin, isConnected, isRightChain } = useWeb3()
-provide('web3', web3)
-// provide('contract', contract)
-handleLogin()
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <router-view />

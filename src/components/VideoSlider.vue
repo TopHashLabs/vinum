@@ -1,6 +1,6 @@
 <template>
   <carousel :items-to-show="itemsToShow" :autoplay="2000" :wrap-around="true">
-    <slide  v-for="video in videos" :key="video">
+    <slide v-for="video in videos" :key="video">
       <video
         autoplay
         muted
@@ -36,5 +36,5 @@ function getVideo(name) {
   return new URL(`../assets/videos/${name}.mp4`, import.meta.url).href
 }
 const itemsToShow = ref(3)
-window.innerWidth > 480 ? itemsToShow.value = 3 : itemsToShow.value = 1
+window.innerWidth > 480 ? (itemsToShow.value = 3) : (itemsToShow.value = 1)
 </script>

@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import ViteComponents from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import pluginEnv from 'vite-plugin-vue-env'
 
 export default defineConfig({
   define: {
@@ -13,6 +14,11 @@ export default defineConfig({
     vue({ reactivityTransform: true }),
     Pages({
       extensions: ['vue']
+    }),
+    pluginEnv({
+      //TODO: Update before using in mainnet
+      CONTRACT_ADDRESS: '0xC51f5eb58a07B8579c97d0176A2F80Cd580158BB',
+      DEFAULT_CHAIN_ID: '3'
     }),
     ViteComponents(),
     AutoImport({

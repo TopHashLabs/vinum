@@ -27,6 +27,7 @@
     "events": "^3.3.0",
     "feather-icons": "^4.28.0",
     "gsap": "^3.9.1",
+    "pinia": "^2.0.12",
     "process": "^0.11.10",
     "util": "^0.12.4",
     "vue": "^3.2.31",
@@ -54,6 +55,7 @@
     "unplugin-auto-import": "^0.5.11",
     "unplugin-vue-components": "^0.17.21",
     "vite": "^2.8.6",
+    "vite-plugin-vue-env": "^1.0.6",
     "vite-plugin-pages": "^0.21.4",
     "vue-eslint-parser": "^7.11.0",
     "vue-tsc": "^0.29.8"

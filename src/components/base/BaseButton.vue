@@ -97,7 +97,7 @@ const bgColorClasses = computed(() => {
   if (props.color.includes('gradient')) return bgGradientClasses.value
   else if (props.outline) return 'bg-transparent'
   else if (props.flat) return bgFlatClasses.value
-  else if (props.color === 'white') return 'bg-white'
+  else if (props.color === 'white') return 'bg-[white]'
   else {
     if (props.disabled) {
       return `bg-gray-300 text-white`

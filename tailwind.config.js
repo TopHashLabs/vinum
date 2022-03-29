@@ -11,7 +11,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        texture: 'url("@/assets/images/texture.png")'
+        texture: 'url("@/assets/images/texture.png")',
+        bottle: 'url("@/assets/images/bg-bottle.png")'
       },
       screens: {
         mobile: { max: '480px' },

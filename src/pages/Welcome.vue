@@ -1,73 +1,71 @@
 <script setup lang="ts">
-import {gsap} from 'gsap'
+import { gsap } from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
-onMounted(() =>{
-
-const mission = gsap.timeline({
+onMounted(() => {
+  const mission = gsap.timeline({
     scrollTrigger: {
       trigger: '#mission',
-      start: 'center bottom',
-  },
-});
-const concept = gsap.timeline({
+      start: 'center bottom'
+    }
+  })
+  const concept = gsap.timeline({
     scrollTrigger: {
       trigger: '#concept',
-      start: 'center bottom',
-  },
-});
-const wine = gsap.timeline({
+      start: 'center bottom'
+    }
+  })
+  const wine = gsap.timeline({
     scrollTrigger: {
       trigger: '#wine',
-      start: 'center bottom',
-  },
-});
+      start: 'center bottom'
+    }
+  })
 
-mission.from('#mission', { x: '100%', duration: 1, opacity: 0 });
-concept.from('#concept', { x: '-100%', duration: 1, opacity: 0 });
-wine.from('#wine', { x: '100%', duration: 1, opacity: 0 });
-const roadmap1 = gsap.timeline({
-  scrollTrigger: {
-    trigger: '#roadmap_section1',
-    start: 'center center',
-  },
-});
-const roadmap2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: '#roadmap_section2',
-    start: 'center center',
-  },
-});
-const roadmap3 = gsap.timeline({
-  scrollTrigger: {
-    trigger: '#roadmap_section3',
-    start: 'center center',
-  },
-});
-const roadmap4 = gsap.timeline({
-  scrollTrigger: {
-    trigger: '#roadmap_section4',
-    start: 'center center',
-  },
-});
-const roadmap5 = gsap.timeline({
-  scrollTrigger: {
-    trigger: '#roadmap_section5',
-    start: 'center center',
-  },
-});
+  mission.from('#mission', { x: '100%', duration: 1, opacity: 0 })
+  concept.from('#concept', { x: '-100%', duration: 1, opacity: 0 })
+  wine.from('#wine', { x: '100%', duration: 1, opacity: 0 })
+  const roadmap1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#roadmap_section1',
+      start: 'center center'
+    }
+  })
+  const roadmap2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#roadmap_section2',
+      start: 'center center'
+    }
+  })
+  const roadmap3 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#roadmap_section3',
+      start: 'center center'
+    }
+  })
+  const roadmap4 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#roadmap_section4',
+      start: 'center center'
+    }
+  })
+  const roadmap5 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#roadmap_section5',
+      start: 'center center'
+    }
+  })
 
-roadmap1.from('#roadmap_section1', { y: '32%', duration: 0.88, opacity: 0 });
-roadmap2.from('#roadmap_section2', { y: '32%', duration: 0.88, opacity: 0 });
-roadmap3.from('#roadmap_section3', { y: '32%', duration: 0.88, opacity: 0 });
-roadmap4.from('#roadmap_section4', { y: '32%', duration: 0.88, opacity: 0 });
-roadmap5.from('#roadmap_section5', { y: '32%', duration: 0.88, opacity: 0 });
+  roadmap1.from('#roadmap_section1', { y: '32%', duration: 0.88, opacity: 0 })
+  roadmap2.from('#roadmap_section2', { y: '32%', duration: 0.88, opacity: 0 })
+  roadmap3.from('#roadmap_section3', { y: '32%', duration: 0.88, opacity: 0 })
+  roadmap4.from('#roadmap_section4', { y: '32%', duration: 0.88, opacity: 0 })
+  roadmap5.from('#roadmap_section5', { y: '32%', duration: 0.88, opacity: 0 })
 })
-
 </script>
 
 <template>
-  <div class=" w-full h-screen text-[1.5vw]">
+  <div class="w-full h-screen text-[1.5vw]">
     <img
       src="@/assets/images/texture.png"
       alt="background"
@@ -137,127 +135,132 @@ roadmap5.from('#roadmap_section5', { y: '32%', duration: 0.88, opacity: 0 });
           <span class="block">assets</span>
           <span class="block">disappears</span>
         </h2>
+        <div class="mx-auto mt-16 text-accent">
+          <BaseButton color="white" to="/sale">
+            <span class="text-xl"> Get Wine </span>
+            <BaseIcon name="chevron-right" />
+          </BaseButton>
+        </div>
       </div>
     </main>
 
     <div class="flex h-[35%] mobile:h-[11%] pl-[2%] w-full z-[-55]">
       <div class="h-full w-[12%] mobile:w-[16.8%]"></div>
-      <div class="h-full w-[88%] border-l-[0.12rem] border-crem pt-[12%] mobile:pt-[-7%]">
-
-      </div>
+      <div
+        class="h-full w-[88%] border-l-[0.12rem] border-crem pt-[12%] mobile:pt-[-7%]"
+      ></div>
     </div>
 
-      <section
-        id="mission"
-        class=" relative z-[5] flex h-[60vh] mobile:h-[53vh] mobile:mt-[17vh] pl-[2%] w-full"
-      >
-          
+    <section
+      id="mission"
+      class="relative z-[5] flex h-[60vh] mobile:h-[53vh] mobile:mt-[17vh] pl-[2%] w-full"
+    >
       <span
-            class="absolute top-[-24%] left-[14%] mobile:top-[-7%] ml-[5%] text-[5rem] text-left font-bold text-[#fff] mobile:text-[1.4rem]"
-            >WHY ARE WE HERE?</span
+        class="absolute top-[-24%] left-[14%] mobile:top-[-7%] ml-[5%] text-[5rem] text-left font-bold text-[#fff] mobile:text-[1.4rem]"
+        >WHY ARE WE HERE?</span
+      >
+      <div class="h-full w-[12%] mobile:w-[16.9%]"></div>
+
+      <div
+        class="relative flex items-center h-full w-[88%] border-l-[0.12rem] border-crem bg-[#fff] px-[6%] py-0"
+      >
+        <img
+          class="w-[7rem] mr-[-2rem] mobile:hidden"
+          src="@/assets/images/mission-text.png"
+          alt="Mission"
+        />
+
+        <span class="pr-[26%] pl-[9%] mobile:pr-0 mobile:pl-[3%]">
+          <p
+            class="opacity-70 font-medium leading-[1.9rem] mobile:mt-0 mobile:text-[0.8rem] mobile:leading-[1.55rem]"
           >
-        <div class="h-full w-[12%] mobile:w-[16.9%]"></div>
-
-        <div
-          class="relative flex items-center h-full w-[88%] border-l-[0.12rem] border-crem bg-[#fff] px-[6%] py-0"
-        >
-          <img
-            class="w-[7rem] mr-[-2rem] mobile:hidden"
-            src="@/assets/images/mission-text.png"
-            alt="Mission"
-          />
-
-          <span class="pr-[26%] pl-[9%] mobile:pr-0 mobile:pl-[3%]">
-            <p
-              class="opacity-70 font-medium leading-[1.9rem] mobile:mt-0 mobile:text-[0.8rem] mobile:leading-[1.55rem]"
-            >
-              we are solving the interoperability between the metaverse and
-              real-world, where NFTs will represent tickets or
-              proof-of-ownership for assets in both worlds
-            </p>
-            <p
-              class="mt-[2.2rem] opacity-70 font-medium leading-[1.9rem] mobile:mt-0 mobile:text-[0.8rem] mobile:leading-[1.55rem]"
-            >
-              by pioneering the movement of real business to the metaverse. we
-              want to achieve a new way of representing a real world brand with
-              a real life product, in the new digital world.
-            </p>
-          </span>
-        </div>
-      </section>
-      <section
+            we are solving the interoperability between the metaverse and
+            real-world, where NFTs will represent tickets or proof-of-ownership
+            for assets in both worlds
+          </p>
+          <p
+            class="mt-[2.2rem] opacity-70 font-medium leading-[1.9rem] mobile:mt-0 mobile:text-[0.8rem] mobile:leading-[1.55rem]"
+          >
+            by pioneering the movement of real business to the metaverse. we
+            want to achieve a new way of representing a real world brand with a
+            real life product, in the new digital world.
+          </p>
+        </span>
+      </div>
+    </section>
+    <section
       id="concept"
-        class="relative z-[5] flex h-[60vh] mobile:h-[50vh] w-full mt-[20%]"
+      class="relative z-[5] flex h-[60vh] mobile:h-[50vh] w-full mt-[20%]"
+    >
+      <div
+        class="relative flex items-center h-full w-[88%] mobile:w-[82%] border-l-[0.12rem] border-crem bg-[#fff] px-[6%]"
       >
-        <div
-          class="relative flex items-center h-full w-[88%] mobile:w-[82%] border-l-[0.12rem] border-crem bg-[#fff] px-[6%]"
+        <span
+          class="absolute top-[-26.5%] right-0 text-[5.6rem] font-bold text-[#fff] mobile:top-[-7.3%] mobile:right-[initial] mobile:left-[10%] mobile:text-[1.4rem]"
+          >WHAT’S OUR VISION?</span
         >
-          <span
-            class="absolute top-[-26.5%] right-0 text-[5.6rem] font-bold text-[#fff] mobile:top-[-7.3%] mobile:right-[initial] mobile:left-[10%] mobile:text-[1.4rem]"
-            >WHAT’S OUR VISION?</span
+        <span class="mr-[5%] ml-[23%] mobile:ml-[5%]">
+          <p
+            class="opacity-70 font-medium leading-[1.9rem] mobile:text-[0.8rem] mobile:leading-[1.55rem]"
           >
-          <span class="mr-[5%] ml-[23%] mobile:ml-[5%]">
-            <p
-              class="opacity-70 font-medium leading-[1.9rem] mobile:text-[0.8rem] mobile:leading-[1.55rem]"
-            >
-              let us describe you the first concept of meta wine that our
-              project Vinum is about to bring to life.
-            </p>
-            <p
-              class="mt-[2.2rem] opacity-70 font-medium leading-[1.9rem] mobile:text-[0.8rem] mobile:leading-[1.55rem]"
-            >
-              we want to launch an NFT collection that will serve as proof of
-              ownership of an exclusive and limited edition real asset that gets
-              more valuable as time goes, as well as digital asset deployed in
-              the metaverse.
-            </p>
-          </span>
+            let us describe you the first concept of meta wine that our project
+            Vinum is about to bring to life.
+          </p>
+          <p
+            class="mt-[2.2rem] opacity-70 font-medium leading-[1.9rem] mobile:text-[0.8rem] mobile:leading-[1.55rem]"
+          >
+            we want to launch an NFT collection that will serve as proof of
+            ownership of an exclusive and limited edition real asset that gets
+            more valuable as time goes, as well as digital asset deployed in the
+            metaverse.
+          </p>
+        </span>
 
-          <img
-            class="w-[7rem] mobile:hidden"
-            src="@/assets/images/concept-text.png"
-            alt="Concept"
-          />
-        </div>
-      </section>
-      <section
+        <img
+          class="w-[7rem] mobile:hidden"
+          src="@/assets/images/concept-text.png"
+          alt="Concept"
+        />
+      </div>
+    </section>
+    <section
       id="wine"
-        class="relative z-[5] flex h-[60vh] mobile:h-[68vh] pl-[2%] w-full mt-[20%]"
+      class="relative z-[5] flex h-[60vh] mobile:h-[68vh] pl-[2%] w-full mt-[20%]"
+    >
+      <div class="h-full w-[12%] mobile:h-[16%]"></div>
+
+      <div
+        class="relative flex items-center h-full w-[88%] border-l-[0.12rem] border-crem bg-[#fff] pl-[6%] pt-0"
       >
-        <div class="h-full w-[12%] mobile:h-[16%]"></div>
-
-        <div
-          class="relative flex items-center h-full w-[88%] border-l-[0.12rem] border-crem bg-[#fff] pl-[6%] pt-0"
+        <span
+          class="absolute top-[-23.2%] left-0 text-[5rem] font-bold text-[#fff] mobile:top-[-5.5%] mobile:text-[1.4rem]"
+          >WHAT IS OUR PASSION?</span
         >
-          <span
-            class="absolute top-[-23.2%] left-0 text-[5rem] font-bold text-[#fff] mobile:top-[-5.5%] mobile:text-[1.4rem]"
-            >WHAT IS OUR PASSION?</span
-          >
-          <img
-            class="w-[7rem] mobile:hidden"
-            src="@/assets/images/wine-text.png"
-            alt="Wine"
-          />
+        <img
+          class="w-[7rem] mobile:hidden"
+          src="@/assets/images/wine-text.png"
+          alt="Wine"
+        />
 
-          <span class="pr-[18%] pl-[9%] mobile:pr-[4%] mobile:pl-[6%]">
-            <p
-              class="opacity-70 font-medium leading-[1.9rem] mobile:text-[0.8rem] mobile:leading-[1.55rem]"
-            >
-              In the long process of wine researching, we have found and decided
-              to pick special, and unique place for our wine origination.
-            </p>
-            <p
-              class="mt-[2.2rem] opacity-70 font-medium leading-[1.9rem] mobile:text-[0.8rem] mobile:leading-[1.55rem]"
-            >
-              As for us the NFT was a discovery, Romanian wine will be the wine
-              like no others ever presented to the world. The small country,
-              unknown to the most, which has one of the best terrains for wine
-              grapes cultivation, simply delighted us with its wine, culture and
-              history.
-            </p>
-          </span>
-        </div>
-      </section>
+        <span class="pr-[18%] pl-[9%] mobile:pr-[4%] mobile:pl-[6%]">
+          <p
+            class="opacity-70 font-medium leading-[1.9rem] mobile:text-[0.8rem] mobile:leading-[1.55rem]"
+          >
+            In the long process of wine researching, we have found and decided
+            to pick special, and unique place for our wine origination.
+          </p>
+          <p
+            class="mt-[2.2rem] opacity-70 font-medium leading-[1.9rem] mobile:text-[0.8rem] mobile:leading-[1.55rem]"
+          >
+            As for us the NFT was a discovery, Romanian wine will be the wine
+            like no others ever presented to the world. The small country,
+            unknown to the most, which has one of the best terrains for wine
+            grapes cultivation, simply delighted us with its wine, culture and
+            history.
+          </p>
+        </span>
+      </div>
+    </section>
 
     <section
       class="bg-[#fff] mt-[30vh] relative pt-[8%] pb-[7%] pl-[14%] mobile:overflow-hidden"
@@ -268,7 +271,10 @@ roadmap5.from('#roadmap_section5', { y: '32%', duration: 0.88, opacity: 0 });
         class="w-[27rem] ml-[-2rem] mb-[1rem] mobile:w-[16rem] mobile:mb-0"
       />
 
-      <div id="roadmap_section1" class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section1">
+      <div
+        id="roadmap_section1"
+        class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section1"
+      >
         <img
           class="w-[14rem] mobile:w-[9rem] ml-[-1rem]"
           src="@/assets/images/q4-21.png"
@@ -284,7 +290,10 @@ roadmap5.from('#roadmap_section5', { y: '32%', duration: 0.88, opacity: 0 });
         </ul>
       </div>
 
-      <div id="roadmap_section2" class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section2">
+      <div
+        id="roadmap_section2"
+        class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section2"
+      >
         <img
           class="w-[14rem] mobile:w-[9rem] ml-[-1rem]"
           src="@/assets/images/q1-22.png"
@@ -304,7 +313,10 @@ roadmap5.from('#roadmap_section5', { y: '32%', duration: 0.88, opacity: 0 });
         </ul>
       </div>
 
-      <div id="roadmap_section3" class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section3">
+      <div
+        id="roadmap_section3"
+        class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section3"
+      >
         <img
           class="w-[14rem] mobile:w-[9rem] ml-[-1rem]"
           src="@/assets/images/q2-22.png"
@@ -320,7 +332,10 @@ roadmap5.from('#roadmap_section5', { y: '32%', duration: 0.88, opacity: 0 });
         </ul>
       </div>
 
-      <div id="roadmap_section4" class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section4">
+      <div
+        id="roadmap_section4"
+        class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section4"
+      >
         <img
           class="w-[14rem] mobile:w-[9rem] ml-[-1rem]"
           src="@/assets/images/q3-22.png"
@@ -336,7 +351,10 @@ roadmap5.from('#roadmap_section5', { y: '32%', duration: 0.88, opacity: 0 });
         </ul>
       </div>
 
-      <div id="roadmap_section5" class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section5">
+      <div
+        id="roadmap_section5"
+        class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section5"
+      >
         <img
           class="w-[14rem] mobile:w-[9rem] ml-[-1rem]"
           src="@/assets/images/q4-22.png"
@@ -594,6 +612,4 @@ roadmap5.from('#roadmap_section5', { y: '32%', duration: 0.88, opacity: 0 });
   </div>
 </template>
 
-<style>
-
-</style>
+<style></style>
