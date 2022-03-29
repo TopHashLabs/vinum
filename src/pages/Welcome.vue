@@ -1,8 +1,73 @@
 <script setup lang="ts">
+import {gsap} from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger)
+onMounted(() =>{
+
+const mission = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#mission',
+      start: 'center bottom',
+  },
+});
+const concept = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#concept',
+      start: 'center bottom',
+  },
+});
+const wine = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#wine',
+      start: 'center bottom',
+  },
+});
+
+mission.from('#mission', { x: '100%', duration: 1, opacity: 0 });
+concept.from('#concept', { x: '-100%', duration: 1, opacity: 0 });
+wine.from('#wine', { x: '100%', duration: 1, opacity: 0 });
+const roadmap1 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '#roadmap_section1',
+    start: 'center center',
+  },
+});
+const roadmap2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '#roadmap_section2',
+    start: 'center center',
+  },
+});
+const roadmap3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '#roadmap_section3',
+    start: 'center center',
+  },
+});
+const roadmap4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '#roadmap_section4',
+    start: 'center center',
+  },
+});
+const roadmap5 = gsap.timeline({
+  scrollTrigger: {
+    trigger: '#roadmap_section5',
+    start: 'center center',
+  },
+});
+
+roadmap1.from('#roadmap_section1', { y: '32%', duration: 0.88, opacity: 0 });
+roadmap2.from('#roadmap_section2', { y: '32%', duration: 0.88, opacity: 0 });
+roadmap3.from('#roadmap_section3', { y: '32%', duration: 0.88, opacity: 0 });
+roadmap4.from('#roadmap_section4', { y: '32%', duration: 0.88, opacity: 0 });
+roadmap5.from('#roadmap_section5', { y: '32%', duration: 0.88, opacity: 0 });
+})
+
 </script>
 
 <template>
-  <div class="w-full h-screen text-[1.5vw]">
+  <div class=" w-full h-screen text-[1.5vw]">
     <img
       src="@/assets/images/texture.png"
       alt="background"
@@ -79,27 +144,23 @@
       <div class="h-full w-[12%] mobile:w-[16.8%]"></div>
       <div class="h-full w-[88%] border-l-[0.12rem] border-crem pt-[12%] mobile:pt-[-7%]">
 
-      <span
-            class=" mobile:hidden mobile:absolute ml-[5%] text-[5rem] text-left font-bold text-[#fff] mobile:text-[1.4rem]"
-            >WHY ARE WE HERE?</span
-          >
       </div>
     </div>
 
-    <div class="overflow-x-hidden relative">
       <section
-        class="relative z-[5] flex h-[60vh] mobile:h-[53vh] mobile:mt-[17vh] pl-[2%] w-full"
+        id="mission"
+        class=" relative z-[5] flex h-[60vh] mobile:h-[53vh] mobile:mt-[17vh] pl-[2%] w-full"
       >
           
+      <span
+            class="absolute top-[-24%] left-[14%] mobile:top-[-7%] ml-[5%] text-[5rem] text-left font-bold text-[#fff] mobile:text-[1.4rem]"
+            >WHY ARE WE HERE?</span
+          >
         <div class="h-full w-[12%] mobile:w-[16.9%]"></div>
 
         <div
           class="relative flex items-center h-full w-[88%] border-l-[0.12rem] border-crem bg-[#fff] px-[6%] py-0"
         >
-        <span
-            class="absolute desktop:hidden top-[-7%] text-[5rem] text-left font-bold text-[#fff] mobile:text-[1.4rem]"
-            >WHY ARE WE HERE?</span
-          >
           <img
             class="w-[7rem] mr-[-2rem] mobile:hidden"
             src="@/assets/images/mission-text.png"
@@ -125,6 +186,7 @@
         </div>
       </section>
       <section
+      id="concept"
         class="relative z-[5] flex h-[60vh] mobile:h-[50vh] w-full mt-[20%]"
       >
         <div
@@ -158,8 +220,8 @@
           />
         </div>
       </section>
-
       <section
+      id="wine"
         class="relative z-[5] flex h-[60vh] mobile:h-[68vh] pl-[2%] w-full mt-[20%]"
       >
         <div class="h-full w-[12%] mobile:h-[16%]"></div>
@@ -196,7 +258,6 @@
           </span>
         </div>
       </section>
-    </div>
 
     <section
       class="bg-[#fff] mt-[30vh] relative pt-[8%] pb-[7%] pl-[14%] mobile:overflow-hidden"
@@ -207,7 +268,7 @@
         class="w-[27rem] ml-[-2rem] mb-[1rem] mobile:w-[16rem] mobile:mb-0"
       />
 
-      <div class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section1">
+      <div id="roadmap_section1" class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section1">
         <img
           class="w-[14rem] mobile:w-[9rem] ml-[-1rem]"
           src="@/assets/images/q4-21.png"
@@ -223,7 +284,7 @@
         </ul>
       </div>
 
-      <div class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section2">
+      <div id="roadmap_section2" class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section2">
         <img
           class="w-[14rem] mobile:w-[9rem] ml-[-1rem]"
           src="@/assets/images/q1-22.png"
@@ -243,7 +304,7 @@
         </ul>
       </div>
 
-      <div class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section3">
+      <div id="roadmap_section3" class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section3">
         <img
           class="w-[14rem] mobile:w-[9rem] ml-[-1rem]"
           src="@/assets/images/q2-22.png"
@@ -259,7 +320,7 @@
         </ul>
       </div>
 
-      <div class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section4">
+      <div id="roadmap_section4" class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section4">
         <img
           class="w-[14rem] mobile:w-[9rem] ml-[-1rem]"
           src="@/assets/images/q3-22.png"
@@ -275,7 +336,7 @@
         </ul>
       </div>
 
-      <div class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section5">
+      <div id="roadmap_section5" class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section5">
         <img
           class="w-[14rem] mobile:w-[9rem] ml-[-1rem]"
           src="@/assets/images/q4-22.png"
@@ -533,4 +594,6 @@
   </div>
 </template>
 
-<style></style>
+<style>
+
+</style>
