@@ -28,28 +28,27 @@ async function mint(): Promise<void> {
       alt="background"
       class="absolute -z-10 inset-0 mobile:object-cover"
     />
-    <div class="grid grid-cols-9 mobile:grid-cols-6">
+    <div class="flex justify-end">
       <ConnectWallet
-        class="col-end-10 col-span-3 mobile:col-span-5 mobile:col-end-7"
       />
     </div>
     <div
-      class="grid grid-cols-12 mobile:grid-cols-9 gap-y-4 absolute bottom-[24px] inset-x-0"
+      class="flex flex-col space-y-2 w-48 mx-auto justify-center items-center absolute bottom-[24px] inset-x-0"
     >
       <div
-        class="col-end-8 col-span-2 mobile:col-span-3 mobile:col-end-7 bg-[black] bg-opacity-25 rounded-full text-[#fff] text-xl mobile:text-xs p-4 mobile:p-2 text-center"
+        class="w-full bg-[black] bg-opacity-25 rounded-full text-[#fff] text-xl mobile:text-xs py-4 mobile:py-2 text-center"
       >
         {{ `${contract.totalMinted} / ${contract.totalSupply}` }} Minted
       </div>
       <div
-        class="col-end-8 col-span-2 mobile:col-span-3 mobile:col-end-7 flex justify-around bg-[black] bg-opacity-25 rounded-full text-[#fff] text-2xl mobile:text-lg p-4 mobile:p-2 text-center"
+        class="w-full flex justify-around bg-[black] bg-opacity-25 rounded-full text-[#fff] text-2xl mobile:text-lg py-4 mobile:py-2 text-center"
       >
         <button @click="amount--" :disabled="amount < 1">-</button>
         <span>{{ amount }}</span>
         <button @click="amount++">+</button>
       </div>
       <div
-        class="col-end-8 col-span-2 mobile:col-span-3 mobile:col-end-7 bg-[black] bg-opacity-25 rounded-full"
+        class="w-full bg-[black] bg-opacity-25 rounded-full"
       >
         <BaseButton
           @click="mint"
