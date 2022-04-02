@@ -18,9 +18,7 @@ const props = defineProps({
     validator: (val: string): boolean =>
       [
         'primary',
-        'gradient',
-        'gradient-reverse',
-        'gradient-pink-yellow',
+        'black',
         'gray',
         'red',
         'white',
@@ -68,39 +66,16 @@ const circleSizeClasses = computed(() => {
       return 'w-10 h-10 text-base'
   }
 })
-const bgGradientClasses = computed(() => {
-  if (props.outline) return 'bg-transparent'
-  let fromColor = 'blue'
-  let toColor = 'pink'
-  if (props.color === 'gradient-reverse') {
-    fromColor = 'pink'
-    toColor = 'blue'
-  } else if (props.color === 'gradient-pink-yellow') {
-    fromColor = 'pink'
-    toColor = 'yellow'
-  }
-  if (props.disabled) {
-    return `bg-gray-300 text-white`
-  }
-  if (props.loading) {
-    return propsColor.value
-  }
-  return `
-        bg-gradient-to-tr from-${fromColor}-500 to-${toColor}-500
-        hover:from-${fromColor}-600 hover:to-${toColor}-600
-      `
-})
 const bgFlatClasses = computed(() => {
   return propsColor.value
 })
 const bgColorClasses = computed(() => {
-  if (props.color.includes('gradient')) return bgGradientClasses.value
-  else if (props.outline) return 'bg-transparent'
+  if (props.outline) return 'bg-transparent'
   else if (props.flat) return bgFlatClasses.value
-  else if (props.color === 'white') return 'bg-[white]'
+  else if (props.color === 'white') return 'bg-white'
   else {
     if (props.disabled) {
-      return `bg-gray-300 text-white`
+      return props.color === 'black' ? propsColor.value : 'bg-gray-500'
     }
     if (props.loading) {
       return propsColor.value
@@ -135,6 +110,10 @@ const propsColor = computed(() => {
             bg-white hover:bg-gray-100
             dark:bg-white-dark dark:hover:bg-white-dark
           `
+    case 'black':
+      return `
+            bg-black bg-opacity-25 hover:bg-opacity-30
+      `
     default:
       return `
             bg-blue-500 hover:bg-blue-600

@@ -74,22 +74,17 @@ onMounted(() => {
     <img
       src="@/assets/images/Web-bottle-blue.png"
       alt="bottle"
-      class="w-[80%] absolute top-[-55%] right-[-35%] z-[4] mobile:hidden block"
+      class="w-[96%] absolute top-[-65%] sm right-[-35%] z-[4] mobile:top-[10%] mobile:left-[40%] mobile:transfrom mobile:scale-[2.5]"
     />
-    <img
-      src="@/assets/images/Web-bottle-red.png"
-      alt="bottle"
-      class="hidden mobile:block absolute top-[10%] left-[40%] transfrom scale-[2.5] z-[4]"
-    />
-
     <header class="flex w-full h-[30%] mobile:h-[27%] pl-[2%]">
       <div class="w-[12%] mobile:w-[16%]"></div>
 
       <div
-        class="relative overflow-hidden w-[88%] mobile:w-[84%] border-l-[0.12rem] border-crem bg-header-desktop bg-header-mobile"
+        class="relative overflow-hidden w-[88%] mobile:w-[84%] border-l-[0.12rem] border-crem "
       >
+      <div class="absolute inset-y-0 left-0 right-[10%] bg-header-desktop mobile:bg-header-mobile"></div>
         <img
-          class="absolute mobile:left-[140%] mobile:top-0 transform mobile:scale-[4] w-full scale-110 opacity-[92%] left-0 -top-[30.5%] z-[-5]"
+          class="absolute mobile:left-[140%] mobile:top-0 transform mobile:scale-[4] w-full scale-[1.3] opacity-[92%] left-[10%] -top-[28%] z-[-5]"
           src="@/assets/images/logo.svg"
           alt="logo"
         />
@@ -106,7 +101,7 @@ onMounted(() => {
           <div
             v-for="idx in 3"
             :key="idx"
-            class="text-3xl text-[#fff] text-opacity-75 w-[21rem]"
+            class="text-3xl text-[#fff] text-opacity-75 w-[21rem] mobile:w-[16.5rem] mobile:text-2xl"
           >
             not your typical wine
           </div>
@@ -116,6 +111,7 @@ onMounted(() => {
       <div
         class="mobile:h-full mobile:w-[78%] mobile:pl-[8%] flex flex-col justify-center relative w-[76%] h-full border-l-[0.12rem] border-y-[0.12rem] border-crem bg-accent pl-[7%] py-0 pr-0 z-10"
       >
+      <img src="@/assets/images//glass.svg" class="mobile:mb-6" width="64" alt="">
         <h1
           class="mobile:hidden text-[#fff] mt-[10%] tracking-[0.05rem] text-[2.3rem] font-bold leading-[2.5rem]"
         >
@@ -125,9 +121,9 @@ onMounted(() => {
         </h1>
 
         <h2
-          class="hidden mobile:inline-block leading-[1.7rem] text-[#fff] tracking-[0.05rem] mb-[25%] text-[1.3rem]"
+          class="hidden mobile:inline-block leading-[1.7rem] text-[#fff] tracking-[0.05rem] text-[1.3rem]"
         >
-          <span class="block">welcome</span>
+          <span class="block">Welcome</span>
           <span class="block">to the future,</span>
           <span class="block">where the frontier</span>
           <span class="block">between real-world</span>
@@ -135,10 +131,10 @@ onMounted(() => {
           <span class="block">assets</span>
           <span class="block">disappears</span>
         </h2>
-        <div class=" mt-16 text-accent">
+        <div class=" mt-16 mobile:mt-6">
           <BaseButton color="white" to="/sale">
-            <span class="text-xl"> Get Wine </span>
-            <BaseIcon name="chevron-right" />
+            <span class="text-xl text-accent"> Get your bottle </span>
+            <BaseIcon class="text-accent" name="chevron-right" />
           </BaseButton>
         </div>
       </div>
@@ -153,10 +149,10 @@ onMounted(() => {
 
     <section
       id="mission"
-      class="relative z-[5] flex h-[60vh] mobile:h-[53vh] mobile:mt-[17vh] pl-[2%] w-full"
+      class="relative z-[5] flex h-[60vh] mobile:h-[45vh] mobile:mt-[17vh] pl-[2%] w-full"
     >
       <span
-        class="absolute top-[-24%] left-[14%] mobile:top-[-7%] ml-[5%] text-[5rem] text-left font-bold text-[#fff] mobile:text-[1.4rem]"
+        class="absolute top-[-18%] left-[14%] mobile:top-[-7.5%] ml-[5%] text-[5rem] text-left font-bold text-[#fff] mobile:text-[1.4rem]"
         >WHY ARE WE HERE?</span
       >
       <div class="h-full w-[12%] mobile:w-[16.9%]"></div>
@@ -172,18 +168,14 @@ onMounted(() => {
 
         <span class="pr-[26%] pl-[9%] mobile:pr-0 mobile:pl-[3%]">
           <p
-            class="opacity-70 font-medium leading-[1.9rem] mobile:mt-0 mobile:text-[0.8rem] mobile:leading-[1.55rem]"
+            class="opacity-70 font-normal leading-[1.9rem] mobile:mt-0 mobile:text-[0.8rem] mobile:leading-[1.55rem]"
           >
-            we are solving the interoperability between the metaverse and
-            real-world, where NFTs will represent tickets or proof-of-ownership
-            for assets in both worlds
+            We are solving the interoperability between the metaverse and a real world, where NFTs will represent tickets or proof-of-ownership for assets in both worlds.
           </p>
           <p
-            class="mt-[2.2rem] opacity-70 font-medium leading-[1.9rem] mobile:mt-0 mobile:text-[0.8rem] mobile:leading-[1.55rem]"
+            class="mt-[2.2rem] opacity-70 font-normal leading-[1.9rem] mobile:mt-0 mobile:text-[0.8rem] mobile:leading-[1.55rem]"
           >
-            by pioneering the movement of real business to the metaverse. we
-            want to achieve a new way of representing a real world brand with a
-            real life product, in the new digital world.
+            By pioneering the movement of real business to the metaverse, we want to achieve a new way of representing a real-world brand with a real life product, in the new digital world.
           </p>
         </span>
       </div>
@@ -196,23 +188,19 @@ onMounted(() => {
         class="relative flex items-center h-full w-[88%] mobile:w-[82%] border-l-[0.12rem] border-crem bg-[#fff] px-[6%]"
       >
         <span
-          class="absolute top-[-26.5%] right-0 text-[5.6rem] font-bold text-[#fff] mobile:top-[-7.3%] mobile:right-[initial] mobile:left-[10%] mobile:text-[1.4rem]"
+          class="absolute top-[-20.5%] right-0 text-[5.6rem] font-bold text-[#fff] mobile:top-[-7%] mobile:right-[initial] mobile:left-[10%] mobile:text-[1.4rem]"
           >WHAT’S OUR VISION?</span
         >
         <span class="mr-[5%] ml-[23%] mobile:ml-[5%]">
           <p
-            class="opacity-70 font-medium leading-[1.9rem] mobile:text-[0.8rem] mobile:leading-[1.55rem]"
+            class="opacity-70 font-normal leading-[1.9rem] mobile:text-[0.8rem] mobile:leading-[1.55rem]"
           >
-            let us describe you the first concept of meta wine that our project
-            Vinum is about to bring to life.
+            Let us describe to you the first concept of meta wine that our project Vinum is about to bring to life.
           </p>
           <p
-            class="mt-[2.2rem] opacity-70 font-medium leading-[1.9rem] mobile:text-[0.8rem] mobile:leading-[1.55rem]"
+            class="mt-[2.2rem] opacity-70 font-normal leading-[1.9rem] mobile:text-[0.8rem] mobile:leading-[1.55rem]"
           >
-            we want to launch an NFT collection that will serve as proof of
-            ownership of an exclusive and limited edition real asset that gets
-            more valuable as time goes, as well as digital asset deployed in the
-            metaverse.
+            We want to launch an NFT collection that will serve as proof of ownership for exclusive, and limited edition real assets that get more valuable with time, as well as digital assets deployed in the metaverse.
           </p>
         </span>
 
@@ -225,7 +213,7 @@ onMounted(() => {
     </section>
     <section
       id="wine"
-      class="relative z-[5] flex h-[60vh] mobile:h-[68vh] pl-[2%] w-full mt-[20%]"
+      class="relative z-[5] flex h-[60vh] mobile:h-[50vh] pl-[2%] w-full mt-[20%]"
     >
       <div class="h-full w-[12%] mobile:h-[16%]"></div>
 
@@ -233,7 +221,7 @@ onMounted(() => {
         class="relative flex items-center h-full w-[88%] border-l-[0.12rem] border-crem bg-[#fff] pl-[6%] pt-0"
       >
         <span
-          class="absolute top-[-23.2%] left-0 text-[5rem] font-bold text-[#fff] mobile:top-[-5.5%] mobile:text-[1.4rem]"
+          class="absolute top-[-18.5%] left-0 text-[5rem] font-bold text-[#fff] mobile:top-[-7%] mobile:text-[1.4rem]"
           >WHAT IS OUR PASSION?</span
         >
         <img
@@ -244,19 +232,14 @@ onMounted(() => {
 
         <span class="pr-[18%] pl-[9%] mobile:pr-[4%] mobile:pl-[6%]">
           <p
-            class="opacity-70 font-medium leading-[1.9rem] mobile:text-[0.8rem] mobile:leading-[1.55rem]"
+            class="opacity-70 font-normal leading-[1.9rem] mobile:text-[0.8rem] mobile:leading-[1.55rem]"
           >
-            In the long process of wine researching, we have found and decided
-            to pick special, and unique place for our wine origination.
+            We have been involved in the wine industry for years, and built a rich expertise in the process of wine production. Besides that, during 2021, we couldn’t stay on the side-line, and kept learning about blockchain, NFTs, and Web3.
           </p>
           <p
-            class="mt-[2.2rem] opacity-70 font-medium leading-[1.9rem] mobile:text-[0.8rem] mobile:leading-[1.55rem]"
+            class="mt-[2.2rem] opacity-70 font-normal leading-[1.9rem] mobile:text-[0.8rem] mobile:leading-[1.55rem]"
           >
-            As for us the NFT was a discovery, Romanian wine will be the wine
-            like no others ever presented to the world. The small country,
-            unknown to the most, which has one of the best terrains for wine
-            grapes cultivation, simply delighted us with its wine, culture and
-            history.
+            Realizing the potential of the use case, and the potential of the market, we have decided to combine them, and start building Vinum Web3.
           </p>
         </span>
       </div>
@@ -275,17 +258,13 @@ onMounted(() => {
         id="roadmap_section1"
         class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section1"
       >
-        <img
-          class="w-[14rem] mobile:w-[9rem] ml-[-1rem]"
-          src="@/assets/images/q4-21.png"
-          alt='Q4"21'
-        />
+        <h1 class="text-accent text-5xl  font-extrabold">Q1"22</h1>
 
         <ul
           class="mt-[1rem] space-y-[0.5rem] list-dash text-[#525252] text-[0.95rem] mobile:text-[0.85rem]"
         >
-          <li>Concept was born</li>
-          <li>NFT project design</li>
+          <li>Concept is born</li>
+          <li>Project design</li>
           <li>Web developement</li>
         </ul>
       </div>
@@ -294,11 +273,8 @@ onMounted(() => {
         id="roadmap_section2"
         class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section2"
       >
-        <img
-          class="w-[14rem] mobile:w-[9rem] ml-[-1rem]"
-          src="@/assets/images/q1-22.png"
-          alt='Q1"22'
-        />
+    
+        <h1 class="text-accent text-5xl  font-extrabold">Q2"22</h1>
 
         <ul
           class="mt-[1rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem] list-dash space-y-[0.5rem"
@@ -306,10 +282,7 @@ onMounted(() => {
           <li>Mint</li>
           <li>DAO creation</li>
           <li>NFT staking</li>
-          <li>
-            Wine initial production phase Real-life storage creation
-            commencement
-          </li>
+          <li>Real-life storage creation commencement</li>
         </ul>
       </div>
 
@@ -317,15 +290,14 @@ onMounted(() => {
         id="roadmap_section3"
         class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section3"
       >
-        <img
-          class="w-[14rem] mobile:w-[9rem] ml-[-1rem]"
-          src="@/assets/images/q2-22.png"
-          alt='Q2"22'
-        />
+
+        <h1 class="text-accent text-5xl  font-extrabold">Q3"22</h1>
+
 
         <ul
           class="mt-[1rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem] list-dash space-y-[0.5rem"
         >
+          <li>Winemaking phase starts</li>
           <li>Wine follow up phases and finalization, including design</li>
           <li>Real-life storage completion</li>
           <li>Connecting NFT staking with real life storage</li>
@@ -336,18 +308,16 @@ onMounted(() => {
         id="roadmap_section4"
         class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section4"
       >
-        <img
-          class="w-[14rem] mobile:w-[9rem] ml-[-1rem]"
-          src="@/assets/images/q3-22.png"
-          alt='Q3"22'
-        />
+
+        <h1 class="text-accent text-5xl  font-extrabold">Q4"22</h1>
+
 
         <ul
           class="mt-[1rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem] list-dash space-y-[0.5rem"
         >
-          <li>DAO decision-making begins onwards</li>
+          <li>DAO proposals initiation</li>
           <li>Next year harvest season planning</li>
-          <li>Metaverse shop development proposal(s) initiation</li>
+          <li>Metaverse shop development proposals initiation</li>
         </ul>
       </div>
 
@@ -355,24 +325,22 @@ onMounted(() => {
         id="roadmap_section5"
         class="mt-[3.8rem] pr-[70%] mobile:pr-[35%] roadmap_section5"
       >
-        <img
-          class="w-[14rem] mobile:w-[9rem] ml-[-1rem]"
-          src="@/assets/images/q4-22.png"
-          alt='Q4"22'
-        />
+
+        <h1 class="text-accent text-5xl  font-extrabold">Q1"23</h1>
+
 
         <ul
           class="mt-[1rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem] list-dash space-y-[0.5rem"
         >
-          <li>NFT mint - funding round</li>
-          <li>Production phase restarts as in the previous cycle</li>
+          <li>NFT mint - funding round(new year cycle)</li>
+          <li>Wine production phase restarts</li>
         </ul>
       </div>
 
       <img
         src="@/assets/images/roadmap.png"
         alt="leaves"
-        class="absolute right-0 top-0 h-full mobile:right-[-50%] mobile:top-[-10%] mobile:w-[144%]"
+        class="absolute right-0 top-0 h-full mobile:right-[-5%] mobile:top-[4%] mobile:h-[50%]"
       />
     </section>
 
@@ -398,18 +366,18 @@ onMounted(() => {
           <h2
             class="text-[#fff] text-[5rem] font-bold leading-[5rem] mobile:ml-[38%] mobile:mt-[2rem] mobile:text-[1.8rem] mobile:leading-[2rem]"
           >
-            GENESIS NFT <span style="display: block">COLLECTION</span>
+            GENESIS COLLECTION <span style="display: block">COLLECTION</span>
           </h2>
 
           <ul
             class="list-dash text-[#fff] opacity-80 font-light text-[1rem] space-y-[0.5rem] mt-[1.5rem] mobile:p-2 mobile:mt-[3.5rem]"
           >
-            <li>Harvest year 2021</li>
+            <li>Harvest year 2022</li>
             <li>Total supply 10,000</li>
             <li>10 wine types, 1000 editions each</li>
             <li>Public sale details - TBD</li>
             <li class="mobile:mb-[2rem]">
-              The NFTs having voting rights embeded
+              Genesis collection NFTs have embedded voting rights
             </li>
           </ul>
         </div>
@@ -436,32 +404,27 @@ onMounted(() => {
           </h2>
 
           <ul
-            class="flex mobile:block flex-col h-full justify-beetwen pt-[9.5%] pr-[13%] pb-[8%]"
+            class="flex mobile:block flex-col h-full justify-beetwen py-[18%] pr-[13%] pb-[8%]"
           >
             <li
               class="list-dash opacity-[89%] leading-[1.8rem] mobile:text-[0.8rem] mobile:mt-[1.5rem]"
             >
-              Proof of ownership for digital and real-life exclusive and asset
-              that is limited in production
+              Proof of ownership for digital and real-life exclusive assets that are limited in production.
             </li>
             <li
               class="list-dash opacity-[89%] leading-[1.8rem] mobile:text-[0.8rem] mt-[1.5rem]"
             >
-              NFT Staking = Wine storage, which increases the wine value and
-              gives the owner a special discount for the upcoming year harvest
-              mints if held over specific time period
+              NFT Staking = Wine storage, which increases the wine value and gives the owner a special discount for the upcoming year harvest mints if held over a specific time period.
             </li>
             <li
               class="list-dash opacity-[89%] leading-[1.8rem] mobile:text-[0.8rem] mt-[1.5rem]"
             >
-              NFT Burn = the owner is delivered his unique and exclusive wine
-              bottle right to his door
+              NFT Burn = the owner gets his unique and exclusive wine bottle delivered right to his door.
             </li>
             <li
               class="list-dash opacity-[89%] leading-[1.8rem] mobile:text-[0.8rem] mt-[1.5rem]"
             >
-              NFT = DAO voting interest. Future vital decisions will be taken by
-              the DAO and future proposal will be considered by them.
+              NFT = DAO voting interest. Future vital decisions and direction of the project will be taken by the DAO.
             </li>
           </ul>
 
@@ -517,11 +480,7 @@ onMounted(() => {
         <p
           class="opacity-90 leading-[1.83rem] text-[0.9rem] ml-[5%] mr-[35%] mobile:mr-[15%]"
         >
-          We are a small team of seven open-minded friends that has overall
-          expertise in wine business, design, and financial industry. We do
-          share the common believe in the in bright future of Web3, and the
-          deployment & transition of conventional business onto the
-          decentralized world.
+          We are a small team of seven open-minded friends that has overall expertise in design, wine business, financial industry, WEB3 development. We do share the common belief in the bright future of WEB3, and the deployment & transition of conventional businesses onto the decentralized world.
         </p>
       </div>
     </section>
@@ -552,30 +511,22 @@ onMounted(() => {
           <li
             class="mt-[0.3rem] text-accent text-[1rem] mobile:text-[0.8rem] font-bold"
           >
-            - Web3 developer (Solidity)
+            - Community manager (administrating Twitter, Discord)
           </li>
           <li
             class="mt-[0.3rem] text-accent text-[1rem] mobile:text-[0.8rem] font-bold"
           >
-            - Community manager (Twitter & Discord)
-          </li>
-          <li
-            class="mt-[0.3rem] text-accent text-[1rem] mobile:text-[0.8rem] font-bold"
-          >
-            - Marketing lead (Social media manager & strategy)
+            - Marketing manager (social media manager & ambassador & strategy development)
           </li>
         </ul>
 
         <p
           class="text-accent opacity-90 leading-[1.8rem] mr-[30%] mt-[3rem] mobile:leading-[1.4rem] mobile:text-[0.8rem] mobile:mr-[10%] mobile:mt-[2rem]"
         >
-          <span class="block"
-            >We are happy to work with people that are willing to share our
-            vision and are part of the decentralized movement.</span
-          >
-          Do not hesitate to mail us at vinumw3@gmail.com with a simplified
-          resume, a short description of yourself, and indicate the position you
-          want to apply for.
+          <span class="block">
+            We are happy to work with people that are willing to share our vision and are part of the decentralized movement.
+          </span>
+          Do not hesitate to mail us at <span class="font-medium">vinumw3@gmail.com</span> with a simplified resume, a short description of yourself, and indicate the position you want to apply for.
         </p>
       </div>
     </section>
