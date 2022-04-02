@@ -397,14 +397,14 @@ onMounted(() => {
 
       <div class="flex w-full h-full">
         <div
-          class="flex items-center w-[88%] mobile:w-[96%] h-full bg-[#fff] pr-[5%] pl-[23%] mobile:flex-col mobile:pt-[5%] mobile:pl-[15%]"
+          class="flex items-center w-[88%] mobile:w-[96%] h-full bg-[#fff] pr-[5%] pl-[23%] mobile:flex-col mobile:py-[5%] mobile:pl-[15%]"
         >
           <h2 class="hidden mobile:block text-accent font-bold text-[1.7rem]">
             NFT HOLDER
           </h2>
 
           <ul
-            class="flex mobile:block flex-col h-full justify-beetwen py-[18%] pr-[13%] pb-[8%]"
+            class="flex mobile:block flex-col h-full justify-beetwen py-[18%] mobile:pt-0 pr-[13%] "
           >
             <li
               class="list-dash opacity-[89%] leading-[1.8rem] mobile:text-[0.8rem] mobile:mt-[1.5rem]"
@@ -472,10 +472,13 @@ onMounted(() => {
         class="team_main flex items-center bg-[#fff] w-[174%] h-full mobile:flex-col mobile:items-[initial] mobile:justify-center mobile:pl-[4.5%]"
       >
         <h2
-          class="writting-mode-vr text-accent font-bold transform -scale-100 text-[3.3rem] ml-[5%] mobile:scale-0 mobile:text-[2.1rem] mobile:ml-[4%]"
+          class="writting-mode-vr text-accent font-bold transform -scale-100 text-[3.3rem] ml-[5%] mobile:hidden"
         >
           TEAM
         </h2>
+        <h2 class="hidden mobile:block text-accent font-bold text-[2.1rem]">
+            TEAM
+          </h2>
 
         <p
           class="opacity-90 leading-[1.83rem] text-[0.9rem] ml-[5%] mr-[35%] mobile:mr-[15%]"
