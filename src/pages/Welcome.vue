@@ -152,7 +152,7 @@ onMounted(() => {
       class="relative z-[5] flex h-[60vh] mobile:h-[45vh] mobile:mt-[17vh] pl-[2%] w-full"
     >
       <span
-        class="absolute top-[-18%] left-[14%] mobile:top-[-7.5%] ml-[5%] text-[5rem] text-left font-bold text-[#fff] mobile:text-[1.4rem]"
+        class="absolute top-[-20%] left-[14%] mobile:top-[-7.5%] ml-[5%] text-[5rem] text-left font-bold text-[#fff] mobile:text-[1.4rem]"
         >WHY ARE WE HERE?</span
       >
       <div class="h-full w-[12%] mobile:w-[16.9%]"></div>
@@ -188,7 +188,7 @@ onMounted(() => {
         class="relative flex items-center h-full w-[88%] mobile:w-[82%] border-l-[0.12rem] border-crem bg-[#fff] px-[6%]"
       >
         <span
-          class="absolute top-[-20.5%] right-0 text-[5.6rem] font-bold text-[#fff] mobile:top-[-7%] mobile:right-[initial] mobile:left-[10%] mobile:text-[1.4rem]"
+          class="absolute top-[-22.5%] right-0 text-[5.6rem] font-bold text-[#fff] mobile:top-[-7%] mobile:right-[initial] mobile:left-[10%] mobile:text-[1.4rem]"
           >WHAT’S OUR VISION?</span
         >
         <span class="mr-[5%] ml-[23%] mobile:ml-[5%]">
@@ -221,7 +221,7 @@ onMounted(() => {
         class="relative flex items-center h-full w-[88%] border-l-[0.12rem] border-crem bg-[#fff] pl-[6%] pt-0"
       >
         <span
-          class="absolute top-[-18.5%] left-0 text-[5rem] font-bold text-[#fff] mobile:top-[-7%] mobile:text-[1.4rem]"
+          class="absolute top-[-20%] left-0 text-[5rem] font-bold text-[#fff] mobile:top-[-7%] mobile:text-[1.4rem]"
           >WHAT IS OUR PASSION?</span
         >
         <img
