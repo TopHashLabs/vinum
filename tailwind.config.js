@@ -2,14 +2,14 @@ module.exports = {
   mode: 'jit',
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    colors: {
-      accent: '#42139b',
-      crem: '#e4e4e4'
-    },
-    listStyleType: {
-      dash: '"-  "'
-    },
     extend: {
+      colors: {
+        accent: '#42139b',
+        crem: '#e4e4e4'
+      },
+      listStyleType: {
+        dash: '"-  "'
+      },
       backgroundImage: {
         texture: 'url("@/assets/images/texture.png")',
         bottle: 'url("@/assets/images/bg-bottle.png")'

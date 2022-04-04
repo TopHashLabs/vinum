@@ -22,13 +22,14 @@ if (web3.isConnected) {
 </script>
 
 <template>
-  <div
-    class="bg-[black] bg-opacity-25 text-[#fff] text-center uppercase rounded-full text-xl mobile:text-xs"
-  >
+<div>
     <BaseButton
       v-if="!web3.isConnected"
       @click="handleLogin"
       :loading="loading"
+      color="black"
+      rounded
+      circle
       block
       >Connect Wallet</BaseButton
     >
@@ -36,12 +37,15 @@ if (web3.isConnected) {
       v-else-if="!web3.isRightChain"
       @click="switchChain"
       :loading="loading"
+      color="black"
+      rounded
       block
       >Switch Network</BaseButton
     >
     <BaseButton
       disabled
-      class="cursor-auto mobile:flex mobile:flex-col"
+      color="black"
+      rounded
       block
       v-else
     >

@@ -2,7 +2,6 @@
   <carousel :items-to-show="itemsToShow" :autoplay="10000" :wrap-around="true">
     <slide v-for="video in videos" :key="video">
       <video
-        autoplay
         muted
         loop
         preload="metadata"

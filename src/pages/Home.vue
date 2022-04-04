@@ -22,11 +22,11 @@ async function mint(): Promise<void> {
 </script>
 
 <template>
-  <div class="relative h-screen p-12 mobile:p-2">
+  <div class="relative h-screen p-12 mobile:p-2 bg-accent">
     <img
-      src="@/assets/images/bg-bottle.png"
+      src="@/assets/images/Web-bottle-red.png"
       alt="background"
-      class="absolute -z-10 inset-0 mobile:object-cover"
+      class="absolute z-10 inset-0 mobile:object-cover"
     />
     <div class="flex justify-end">
       <ConnectWallet />
@@ -35,12 +35,12 @@ async function mint(): Promise<void> {
       class="flex flex-col space-y-2 w-48 mx-auto justify-center items-center absolute bottom-[24px] inset-x-0"
     >
       <div
-        class="w-full bg-[black] bg-opacity-25 rounded-full text-[#fff] text-xl mobile:text-xs py-4 mobile:py-2 text-center"
+        class="w-full bg-black bg-opacity-25 rounded-full text-white text-xl mobile:text-xs py-4 mobile:py-2 text-center"
       >
         {{ `${contract.totalMinted} / ${contract.totalSupply}` }} Minted
       </div>
       <div
-        class="w-full flex justify-around bg-[black] bg-opacity-25 rounded-full text-[#fff] text-2xl mobile:text-lg py-4 mobile:py-2 text-center"
+        class="w-full flex justify-around bg-black bg-opacity-25 rounded-full text-white text-2xl mobile:text-lg py-4 mobile:py-2 text-center"
       >
         <button @click="amount--" :disabled="amount < 1">-</button>
         <span>{{ amount }}</span>
@@ -49,18 +49,17 @@ async function mint(): Promise<void> {
       <div class="w-full bg-[black] bg-opacity-25 rounded-full">
         <BaseButton
           @click="mint"
+          color="black"
           :loading="loading"
           :disabled="
             (!contract.whitelistSaleOpen && !contract.publicSaleOpen) ||
             !web3.isConnected
           "
+          rounded
           block
         >
-          <span class="uppercase text-[#fff] text-2xl mobile:text-lg">
-            Mint
-          </span>
+       MINT
         </BaseButton>
-      </div>
     </div>
   </div>
 </template>
