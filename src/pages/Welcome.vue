@@ -74,7 +74,7 @@ onMounted(() => {
     <img
       src="@/assets/images/Web-bottle-blue.png"
       alt="bottle"
-      class="w-[96%] absolute top-[-65%] sm right-[-35%] z-[4] mobile:top-[10%] mobile:left-[40%] mobile:transfrom mobile:scale-[2.5]"
+      class="w-[96%] absolute top-[-73%] sm right-[-35%] z-[4] mobile:top-[10%] mobile:left-[40%] mobile:transfrom mobile:scale-[2.5]"
     />
     <header class="flex w-full h-[30%] mobile:h-[27%] pl-[2%]">
       <div class="w-[12%] mobile:w-[16%]"></div>
