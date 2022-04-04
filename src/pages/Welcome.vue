@@ -135,7 +135,7 @@ onMounted(() => {
           <span class="block">assets</span>
           <span class="block">disappears</span>
         </h2>
-        <div class=" mt-16 text-accent">
+        <div class="mt-16 text-accent">
           <BaseButton color="white" to="/sale">
             <span class="text-xl"> Get Wine </span>
             <BaseIcon name="chevron-right" />

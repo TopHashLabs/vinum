@@ -29,8 +29,7 @@ async function mint(): Promise<void> {
       class="absolute -z-10 inset-0 mobile:object-cover"
     />
     <div class="flex justify-end">
-      <ConnectWallet
-      />
+      <ConnectWallet />
     </div>
     <div
       class="flex flex-col space-y-2 w-48 mx-auto justify-center items-center absolute bottom-[24px] inset-x-0"
@@ -47,9 +46,7 @@ async function mint(): Promise<void> {
         <span>{{ amount }}</span>
         <button @click="amount++">+</button>
       </div>
-      <div
-        class="w-full bg-[black] bg-opacity-25 rounded-full"
-      >
+      <div class="w-full bg-[black] bg-opacity-25 rounded-full">
         <BaseButton
           @click="mint"
           :loading="loading"
