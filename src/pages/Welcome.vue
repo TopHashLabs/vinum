@@ -111,7 +111,6 @@ onMounted(() => {
       <div
         class="mobile:h-full mobile:w-[78%] mobile:pl-[8%] flex flex-col justify-center relative w-[76%] h-full border-l-[0.12rem] border-y-[0.12rem] border-crem bg-accent pl-[7%] py-0 pr-0 z-10"
       >
-      <img src="@/assets/images//glass.svg" class="mobile:mb-6" width="64" alt="">
         <h1
           class="mobile:hidden text-[#fff] mt-[10%] tracking-[0.05rem] text-[2.3rem] font-bold leading-[2.5rem]"
         >
@@ -277,12 +276,13 @@ onMounted(() => {
         <h1 class="text-accent text-5xl  font-extrabold">Q2"22</h1>
 
         <ul
-          class="mt-[1rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem] list-dash space-y-[0.5rem"
+          class="mt-[1rem] text-[#525252] text-[0.95rem] mobile:text-[0.85rem] list-dash  space-y-[0.5rem]"
         >
           <li>Mint</li>
           <li>DAO creation</li>
           <li>NFT staking</li>
           <li>Real-life storage creation commencement</li>
+          <li> <span class="text-3xl mobile:text-2xl font-medium " >???</span></li>
         </ul>
       </div>
 
@@ -318,6 +318,7 @@ onMounted(() => {
           <li>DAO proposals initiation</li>
           <li>Next year harvest season planning</li>
           <li>Metaverse shop development proposals initiation</li>
+          <li> <span class="text-3xl mobile:text-2xl font-medium " >???</span></li>
         </ul>
       </div>
 
@@ -340,7 +341,7 @@ onMounted(() => {
       <img
         src="@/assets/images/roadmap.png"
         alt="leaves"
-        class="absolute right-0 top-0 h-full mobile:right-[-5%] mobile:top-[4%] mobile:h-[50%]"
+        class="absolute right-0 top-0 h-full mobile:right-[-5%] mobile:top-[8%] mobile:h-[30%]"
       />
     </section>
 
@@ -400,7 +401,7 @@ onMounted(() => {
           class="flex items-center w-[88%] mobile:w-[96%] h-full bg-[#fff] pr-[5%] pl-[23%] mobile:flex-col mobile:py-[5%] mobile:pl-[15%]"
         >
           <h2 class="hidden mobile:block text-accent font-bold text-[1.7rem]">
-            NFT HOLDER
+            NFT HODLER
           </h2>
 
           <ul
@@ -431,7 +432,7 @@ onMounted(() => {
           <h2
             class="writting-mode-vr text-accent text-[3.35rem] font-bold mobile:hidden"
           >
-            NFT HOLDER
+            NFT HODLER
           </h2>
         </div>
         <div
@@ -445,17 +446,13 @@ onMounted(() => {
         class="relative w-[15%] h-full bg-holder mobile:hidden mobile:bg-none before:absolute before:w-full before:h-[0.05rem] before:bg-[#fff] before:top-[14%] before:right-[-40%] after:content-[''] after:absolute after:w-full after:h-[14%] after:top-0 after:bg-accent mobile:break-before-all"
       ></div>
       <div
-        class="flex flex-col items-center justify-center w-[73%] h-full border-x-[0.12rem] border-crem pt-[7%] mobile:w-full mobile:border-none"
+        class="flex flex-col items-center w-[73%] h-full border-x-[0.12rem] border-crem pt-[7%] mobile:w-full mobile:border-none"
       >
-        <h2 class="text-[#fff] text-[3rem] font-bold mobile:text-[1.5rem]">
-          ALLOCATION OF FUNDS
+        <h2 class="text-white text-9xl font-bold mobile:text-7xl">
+          ???
         </h2>
 
-        <img
-          class="w-[80%] mt-[1rem] mobile:w-[93%]"
-          src="@/assets/images/graf.png"
-          alt="allocation of funds"
-        />
+        <p class="text-center text-9xl mobile:text-7xl font-bold transform scale-150 my-auto text-white">TBA</p>
       </div>
 
       <div
