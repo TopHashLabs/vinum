@@ -16,7 +16,7 @@ function closeNav(): void {
       }
     ]"
   >
-    <img src="@/assets/images/Logo.svg" class="mobile:w-[47px] z-[60]" alt="" />
+    <img src="@/assets/images/logo.svg" class="mobile:w-[47px] z-[60]" alt="" />
     <div
       @click="toggleNav"
       class="hidden mobile:flex w-10 h-10 rounded-full bg-gray cursor-pointer justify-center items-center"
