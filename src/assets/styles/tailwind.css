@@ -1,18 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.writting-mode-vr {
-  writing-mode: vertical-rl;
-}
-.bg-header-desktop {
-  background: linear-gradient(180deg, rgba(66, 19, 155, 0) 0%, #42139b 150%);
-}
-@media (max-width: 480px) {
-  .bg-header-mobile {
-    background: linear-gradient(90deg, rgba(66, 19, 155, 0) 0%, #42139b 50%);
-  }
-}
-.bg-holder {
-  background: linear-gradient(90deg, rgba(197, 167, 255, 0) 0%, #a088cc 100%);
-}

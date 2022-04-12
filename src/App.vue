@@ -1,7 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <template>
-  <router-view />
+  <div class="container mobile:px-6 mx-auto">
+    <Header />
+    <router-view />
+  </div>
+  <Footer />
 </template>
 
 <style>
@@ -11,21 +16,16 @@
   box-sizing: border-box;
 }
 
-html,body {
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    overflow-x: hidden;
-    max-width: 100%;
-  }
-
-h1,
-h2 {
-  font-family: 'Poppins', sans-serif;
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  background-color: #101010;
 }
-
-@media all and (min-width: 1025px) {
-  #app {
-    font-size: 1.25vw;
-  }
+body,
+html {
+  position: relative;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 </style>
