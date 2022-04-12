@@ -3,7 +3,7 @@
     <div class="container mobile:px-6 mx-auto">
       <div class="flex mobile:flex-col mobile:space-y-[46px] justify-between">
         <div class="basis-1/2">
-          <img class="mb-9" src="@/assets/images/logo-black.svg" alt="" />
+          <img class="mb-9" src="@/assets/images/logo-dark.svg" alt="" />
           <SocialList color="black" />
         </div>
         <div href="#concept" class="basis-1/4 flex flex-col space-y-[40px] text-sm font-medium">
