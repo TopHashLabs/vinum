@@ -474,7 +474,7 @@ watch(counter, () => {
             <h1 class="text-lg font-semibold">Jaden Kim</h1>
             <p class="text-base font-normal text-white/50">Designer</p>
             <div class="flex items-center space-x-2">
-              <img src="@/assets/images/social/twitter.svg" alt="" />
+              <img src="@/assets/images/social/white/twitter.svg" alt="" />
               <a class="">@kim_j</a>
             </div>
           </div>
@@ -485,7 +485,7 @@ watch(counter, () => {
             <h1 class="text-lg font-semibold">Jaden Kim</h1>
             <p class="text-base font-normal text-white/50">Designer</p>
             <div class="flex items-center space-x-2">
-              <img src="@/assets/images/social/twitter.svg" alt="" />
+              <img src="@/assets/images/social/white/twitter.svg" alt="" />
               <a>@kim_j</a>
             </div>
           </div>
@@ -496,7 +496,7 @@ watch(counter, () => {
             <h1 class="text-lg font-semibold">Jaden Kim</h1>
             <p class="text-base font-normal text-white/50">Designer</p>
             <div class="flex items-center space-x-2">
-              <img src="@/assets/images/social/twitter.svg" alt="" />
+              <img src="@/assets/images/social/white/twitter.svg" alt="" />
               <a>@kim_j</a>
             </div>
           </div>
