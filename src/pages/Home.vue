@@ -2,6 +2,7 @@
 import { Sort } from '@/types'
 const counter = ref<number>(0)
 const loading = ref<boolean>(false)
+
 const sortes = reactive<Sort[]>([
   {
     img: 'rose',
