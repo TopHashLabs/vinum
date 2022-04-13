@@ -1,8 +1,8 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    loading: boolean
-    disabled: boolean
+    loading?: boolean
+    disabled?: boolean
   }>(),
   {
     loading: false,

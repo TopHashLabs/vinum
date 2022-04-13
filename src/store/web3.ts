@@ -132,15 +132,22 @@ export const useWeb3 = defineStore('web3', {
       // }
     },
     async switchNetwork(): Promise<void> {
-      if (window.ethereum) {
-        const hexString = DEFAULT_CHAIN_ID.toString(16)
-        try {
-          await window.ethereum.request({
-            method: 'wallet_switchEthereumChain',
-            params: [{ chainId: '0x' + hexString }]
-          })
-        } catch (err) {
-          console.log(err)
+      if (!this.isConnected) return
+      try {
+        await this.auth.web3.provider.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: '0x' + DEFAULT_CHAIN_ID.toString(16) }]
+        })
+      } catch (switchError) {
+        if (switchError.code === 4902) {
+          try {
+            await this.auth.web3.provider.request({
+              method: 'wallet_addEthereumChain',
+              params: DEFAULT_NETWORK
+            })
+          } catch (error) {
+            console.log(error)
+          }
         }
       }
     }
