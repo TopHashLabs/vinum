@@ -8,7 +8,7 @@
         </div>
         <div class="basis-1/4 flex flex-col space-y-4 text-sm font-medium">
           <a href="#about" class="cursor-pointer">
-            <span class="italic mr-0.5">A</span>bou<span class="italic"
+            <span class="italic">A</span>bou<span class="italic"
               >t</span
             >
           </a>
