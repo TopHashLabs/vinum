@@ -18,7 +18,7 @@ export default defineConfig({
     pluginEnv({
       //TODO: Update before using in mainnet
       CONTRACT_ADDRESS: '0xC51f5eb58a07B8579c97d0176A2F80Cd580158BB',
-      DEFAULT_CHAIN_ID: '3'
+      DEFAULT_CHAIN_ID: '1'
     }),
     ViteComponents(),
     AutoImport({
