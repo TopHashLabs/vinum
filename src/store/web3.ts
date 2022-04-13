@@ -133,9 +133,6 @@ export const useWeb3 = defineStore('web3', {
     },
     async switchNetwork(): Promise<void> {
       if (!this.isConnected) return
-      if(!window.ethereum) {
-        return await this.login()
-      }
       try {
         await this.auth.web3.provider.request({
           method: 'wallet_switchEthereumChain',
