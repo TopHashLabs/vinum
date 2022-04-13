@@ -6,8 +6,8 @@
           <img class="mb-9" src="@/assets/images/logo-dark.svg" alt="" />
           <SocialList color="black" />
         </div>
-        <div href="#concept" class="basis-1/4 flex flex-col space-y-[40px] text-sm font-medium">
-          <a  class="cursor-pointer">
+        <div class="basis-1/4 flex flex-col space-y-[40px] text-sm font-medium">
+          <a href="#concept" class="cursor-pointer">
             <span class="italic mr-0.5">C</span>oncep<span class="italic"
               >t</span
             >
