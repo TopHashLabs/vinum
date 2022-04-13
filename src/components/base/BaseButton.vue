@@ -12,7 +12,7 @@ withDefaults(
 </script>
 <template>
   <button
-    class="p-0.5 cursor-pointer w-full rounded-full bg-gradient-to-tr to-[#8F51FF] from-[#FF1B60] transition-all duration-500 hover:from-[#8F51FF] hover:to-[#FF1B60]"
+    class="p-0.5 cursor-pointer w-full rounded-full bg-gradient-to-tr to-[#8F51FF] from-[#FF1B60]"
   >
     <div
       class="bg-main rounded-full flex justify-center items-center py-2.5 text-base font-semibold"
