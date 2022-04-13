@@ -13,7 +13,7 @@ const loading = ref<boolean>(false)
 
 async function handleLogin(): Promise<void> {
   loading.value = true
-  await web3.login('injected')
+  await web3.login()
   loading.value = false
 }
 

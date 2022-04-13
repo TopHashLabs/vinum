@@ -37,7 +37,8 @@ export const useWeb3 = defineStore('web3', {
     }
   },
   actions: {
-    async login(connector = 'injected'): Promise<void> {
+    async login(): Promise<void> {
+      let connector = window.ethereum ? 'injected' : 'walletconnect'
       this.isTrezor = connector === 'trezor'
       this.auth = getInstance()
       this.authLoading = true
