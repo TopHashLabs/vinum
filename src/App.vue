@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="container mobile:px-6 mx-auto">
+  <div class="max-w-[1418px] px-16 mobile:px-6 mx-auto">
     <Header />
     <router-view />
   </div>

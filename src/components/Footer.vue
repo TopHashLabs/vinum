@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white text-black pt-[66px] pb-[193px]">
-    <div class="container mobile:px-6 mx-auto">
+    <div class="max-w-[1418px] px-16 mobile:px-6 mx-auto">
       <div class="flex mobile:flex-col mobile:space-y-[46px] justify-between">
         <div class="basis-1/2">
           <img class="mb-9" src="@/assets/images/logo-dark.svg" alt="" />
