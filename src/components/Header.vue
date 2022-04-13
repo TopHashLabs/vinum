@@ -62,7 +62,7 @@ function closeNav(): void {
         <li class="cursor-pointer group">
           <a @click="closeNav" href="#concept">
 
-          <span class="italic mr-0.5">C</span>onecp<span class="italic">t</span>
+          <span class="italic mr-0.5">C</span>oncep<span class="italic">t</span>
           </a>
           <div
             class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"

@@ -88,7 +88,7 @@ watch(counter, () => {
         </div>
       </div>
     </section>
-    <div class="w-full h-0.5 bg-[#333333] my-28 mobile:mb-8"></div>
+    <div class="w-full h-0.5 bg-[#333333] mt-[140px] mb-[110px] mobile:mt-[76px] mobile:mb-[28px]"></div>
     <SocialList class="hidden mobile:flex mobile:justify-center mobile:mb-28" />
     <section
       class="flex flex-col max-w-[851px] mx-auto mobile:mx-0 space-y-4 items-center mobile:items-start"
@@ -107,7 +107,7 @@ watch(counter, () => {
         brand with a real life product, in the new digital world.
       </p>
     </section>
-    <div class="w-full h-0.5 bg-[#333333] my-28 mobile:hidden block"></div>
+    <div class="w-full h-0.5 bg-[#333333] mt-[112px] mb-[82px] mobile:hidden block"></div>
     <Slider />
     <section
       id="concept"
@@ -160,7 +160,7 @@ watch(counter, () => {
     </section>
     <div
       id="roadmap"
-      class="w-full h-0.5 bg-[#333333] mobile:my-[100px] mt-[130px] mb-[70px]"
+      class="w-full h-0.5 bg-[#333333] mobile:mt-[100px] mobile:mb-[114px] mt-[110px] mb-[90px]"
     ></div>
     <section>
       <h1
@@ -277,8 +277,11 @@ watch(counter, () => {
         </ul>
       </div>
     </section>
+    <div
+      class="w-full h-0.5 bg-[#333333] mobile:mt-[100px] mobile:mb-[114px] mt-[174px] mb-[90px] mobile:hidden"
+    ></div>
     <section
-      class="bg-[#EFEFEF] my-28 rounded-[20px] w-full flex justify-between mobile:flex-col relative"
+      class="bg-[#EFEFEF] mobile:mt-[100px] mobile:mb-[90px] rounded-[20px] w-full flex justify-between mobile:flex-col relative"
     >
       <div class="p-14 mobile:py-7 mobile:-mb-44 mobile:px-3">
         <h1 class="text-black text-4xl font-medium mb-9 mobile:max-w-[245px]">
@@ -339,7 +342,7 @@ watch(counter, () => {
         alt=""
       />
     </section>
-    <section>
+    <section class="mobile:mt-[90px] mt-[115px]">
       <h1
         class="text-4xl font-semibold text-center mb-[130px] mobile:mb-[80px]"
       >
@@ -395,7 +398,7 @@ watch(counter, () => {
       </div>
     </section>
     <div
-      class="w-full h-0.5 bg-[#333333] mobile:mt-[146px] mobile:mb-[114px] mt-[170px] mb-[70px]"
+      class="w-full h-0.5 bg-[#333333] mobile:mt-[146px] mobile:mb-[68px] mt-[170px] mb-[70px]"
     ></div>
     <section>
       <img
@@ -406,10 +409,10 @@ watch(counter, () => {
     </section>
     <div
       id="hiring"
-      class="w-full h-0.5 bg-[#333333] mobile:my-[124px] mt-[90px] mb-[128px]"
+      class="w-full h-0.5 bg-[#333333] mobile:mt-[60px] mobile:mb-[110px] mt-[90px] mb-[130px]"
     ></div>
     <section>
-      <h1 class="text-4xl font-semibold mb-[38px] mobile:text-center">
+      <h1 class="text-4xl mb-[48px] font-semibold mobile:text-center">
         We are expanding!
       </h1>
       <div class="flex mobile:flex-col items-start mobile:items-stretch">
@@ -454,7 +457,7 @@ watch(counter, () => {
       </div>
     </section>
     <div
-      class="w-full h-0.5 bg-[#333333] mobile:mt-[160px] mobile:mb-[86px] mt-[120px] mb-[100px]"
+      class="w-full h-0.5 bg-[#333333] mobile:mt-[160px] mobile:mb-[80px] mt-[130px] mb-[100px]"
     ></div>
     <section class="flex flex-col max-w-[850px] mx-auto items-center">
       <div
