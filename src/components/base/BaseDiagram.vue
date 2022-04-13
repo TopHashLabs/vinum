@@ -10,9 +10,9 @@
 <script setup lang="ts">
 const props = withDefaults(
   defineProps<{
-    currentValue: number
-    maxValue: number
-    color: string
+    currentValue?: number
+    maxValue?: number
+    color?: string
   }>(),
   {
     currentValue: 100,
