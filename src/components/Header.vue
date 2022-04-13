@@ -10,7 +10,7 @@ function closeNav(): void {
 <template>
   <div
     :class="[
-      'flex items-center mobile:items-start justify-between py-[18px]  mobile:py-3 max-w-[810px] mobile:max-w-full',
+      'flex items-center mobile:items-start justify-between py-[18px]  mobile:py-3 max-w-[1110px] mobile:max-w-full',
       {
         'fixed z-50 bg-main inset-0 mobile:px-6': navOpen
       }
@@ -60,9 +60,9 @@ function closeNav(): void {
         class="flex mobile:flex-col mobile:justify-between space-x-12 mobile:space-y-3 mobile:space-x-0"
       >
         <li class="cursor-pointer group">
-          <a @click="closeNav" href="#concept">
+          <a @click="closeNav" href="#about">
 
-          <span class="italic mr-0.5">C</span>oncep<span class="italic">t</span>
+          <span class="italic mr-0.5">A</span>bou<span class="italic">t</span>
           </a>
           <div
             class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"
@@ -79,8 +79,35 @@ function closeNav(): void {
         </li>
         <li class="w-full border border-[#333333] hidden mobile:block"></li>
         <li class="cursor-pointer group">
+          <a @click="closeNav" href="#genesis">
+          <span class="italic mr-0.5">G</span>enesi<span class="italic">s</span>
+          </a>
+          <div
+            class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"
+          ></div>
+        </li>
+        <li class="w-full border border-[#333333] hidden mobile:block"></li>
+        <li class="cursor-pointer group">
+          <a @click="closeNav" href="#holder">
+          <span class="italic mr-0.5">H</span>olde<span class="italic">r</span>
+          </a>
+          <div
+            class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"
+          ></div>
+        </li>
+        <li class="w-full border border-[#333333] hidden mobile:block"></li>
+        <li class="cursor-pointer group">
           <a @click="closeNav" href="#hiring">
           <span class="italic mr-0.5">H</span>irin<span class="italic">g</span>
+          </a>
+          <div
+            class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"
+          ></div>
+        </li>
+        <li class="w-full border border-[#333333] hidden mobile:block"></li>
+        <li class="cursor-pointer group">
+          <a @click="closeNav" href="#team">
+          <span class="italic mr-0.5">T</span>ea<span class="italic">m</span>
           </a>
           <div
             class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"

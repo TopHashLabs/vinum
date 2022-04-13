@@ -91,6 +91,7 @@ watch(counter, () => {
     <div class="w-full h-0.5 bg-[#333333] mt-[140px] mb-[110px] mobile:mt-[76px] mobile:mb-[28px]"></div>
     <SocialList class="hidden mobile:flex mobile:justify-center mobile:mb-28" />
     <section
+      id="about"
       class="flex flex-col max-w-[851px] mx-auto mobile:mx-0 space-y-4 items-center mobile:items-start"
     >
       <div
@@ -281,6 +282,7 @@ watch(counter, () => {
       class="w-full h-0.5 bg-[#333333] mobile:mt-[100px] mobile:mb-[114px] mt-[174px] mb-[90px] mobile:hidden"
     ></div>
     <section
+      id="genesis"
       class="bg-[#EFEFEF] mobile:mt-[100px] mobile:mb-[90px] rounded-[20px] w-full flex justify-between mobile:flex-col relative"
     >
       <div class="p-14 mobile:py-7 mobile:-mb-44 mobile:px-3">
@@ -342,7 +344,10 @@ watch(counter, () => {
         alt=""
       />
     </section>
-    <section class="mobile:mt-[90px] mt-[115px]">
+    <section
+      id="holder"
+      class="mobile:mt-[90px] mt-[115px]"
+    >
       <h1
         class="text-4xl font-semibold text-center mb-[130px] mobile:mb-[80px]"
       >
@@ -458,6 +463,7 @@ watch(counter, () => {
     </section>
     <div
       class="w-full h-0.5 bg-[#333333] mobile:mt-[160px] mobile:mb-[80px] mt-[130px] mb-[100px]"
+      id="team"
     ></div>
     <section class="flex flex-col max-w-[850px] mx-auto items-center">
       <div

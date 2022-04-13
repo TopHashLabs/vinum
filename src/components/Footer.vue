@@ -6,9 +6,9 @@
           <img class="mb-9" src="@/assets/images/logo-dark.svg" alt="" />
           <SocialList color="black" />
         </div>
-        <div class="basis-1/4 flex flex-col space-y-[40px] text-sm font-medium">
-          <a href="#concept" class="cursor-pointer">
-            <span class="italic mr-0.5">C</span>oncep<span class="italic"
+        <div class="basis-1/4 flex flex-col space-y-4 text-sm font-medium">
+          <a href="#about" class="cursor-pointer">
+            <span class="italic mr-0.5">A</span>bou<span class="italic"
               >t</span
             >
           </a>
@@ -17,9 +17,24 @@
               >p</span
             >
           </a>
+          <a href="#genesis" class="cursor-pointer">
+            <span class="italic mr-0.5">G</span>enesi<span class="italic"
+              >s</span
+            >
+          </a>
+          <a href="#holder" class="cursor-pointer">
+            <span class="italic mr-0.5">H</span>olde<span class="italic"
+              >r</span
+            >
+          </a>
           <a href="#hiring" class="cursor-pointer">
             <span class="italic mr-0.5">H</span>irin<span class="italic"
               >g</span
+            >
+          </a>
+          <a href="#team" class="cursor-pointer">
+            <span class="italic mr-0.5">T</span>ea<span class="italic"
+              >m</span
             >
           </a>
         </div>
