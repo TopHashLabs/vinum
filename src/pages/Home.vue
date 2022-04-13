@@ -333,12 +333,12 @@ watch(counter, () => {
       </div>
       <img
         class="absolute mobile:hidden right-0 bottom-0 rounded-br-[20px]"
-        src="@/assets/images/wine-mockup.svg"
+        src="@/assets/images/wine-mockup.png"
         alt=""
       />
       <img
         class="hidden mobile:block rounded-br-[20px]"
-        src="@/assets/images/wine-mockup-mobile.svg"
+        src="@/assets/images/wine-mockup-mobile.png"
         alt=""
       />
     </section>
