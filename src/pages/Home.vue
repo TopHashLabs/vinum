@@ -59,7 +59,7 @@ watch(counter, () => {
         <p class="text-white/50 text-center mobile:text-left">0/1000 Minted</p>
       </div>
       <div
-        class="basis-1/4 mt-4 flex flex-col justify-center mobile:space-y-4 space-y-4"
+        class="basis-[28%] mt-4 flex flex-col justify-center mobile:space-y-4 space-y-4"
       >
         <div class="flex justify-between items-center">
           <div class="flex space-x-2 items-center">

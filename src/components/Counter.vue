@@ -32,7 +32,7 @@ function decrementValue(number: number): number {
     <input
       :value="modelValue"
       @input="emit('update:modelValue', getValue($event))"
-      class="text-center hover:cursor-default w-[106px] text-2xl font-semibold bg-transparent outline-none"
+      class="text-center hover:cursor-default w-[126px] text-2xl font-semibold bg-transparent outline-none"
       type="number"
       readonly
     />
