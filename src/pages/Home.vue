@@ -123,7 +123,7 @@ watch(counter, () => {
           Concept
         </div>
         <h1 class="text-4xl font-semibold">
-          What’s<span
+          What’s <span
             class="inline-block border-4 border-white rounded-full w-[51px] h-[23px]"
           ></span
           >ur vision?
@@ -144,7 +144,7 @@ watch(counter, () => {
           Wine
         </div>
         <h1 class="text-4xl font-semibold">
-          What’s<span
+          What’s <span
             class="inline-block border-4 border-white rounded-full w-[51px] h-[23px]"
           ></span
           >ur passion?
