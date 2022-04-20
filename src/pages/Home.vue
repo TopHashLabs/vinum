@@ -78,7 +78,10 @@ watch(counter, () => {
         </div>
         <div class="flex justify-between items-center">
           <div class="flex space-x-3 items-center">
-            <BaseDiagram />
+            <BaseDiagram 
+              :color="currentSort.type === 'white / semi-sweet' ? 'red' : ''" 
+              :currentValue="currentSort.type === 'white / dry' ? 100 : 59"
+              />
             <p class="italic">{{currentSort.type}}</p>
           </div>
           <p class="text-white/50 italic">2022</p>
@@ -327,12 +330,12 @@ watch(counter, () => {
       </div>
       <img
         class="absolute mobile:hidden right-0 bottom-0 rounded-br-[20px]"
-        src="@/assets/images/wine-mockup.png"
+        src="@/assets/images/wine-mockup.svg"
         alt=""
       />
       <img
         class="hidden mobile:block rounded-br-[20px]"
-        src="@/assets/images/wine-mockup-mobile.png"
+        src="@/assets/images/wine-mockup-mobile.svg"
         alt=""
       />
     </section>
@@ -408,7 +411,7 @@ watch(counter, () => {
     ></div>
     <section>
       <img
-        class="mobile:h-[280px] mx-auto"
+        class="mobile:h-[280px] h-[490px] mx-auto"
         src="@/assets/images/tba.png"
         alt=""
       />

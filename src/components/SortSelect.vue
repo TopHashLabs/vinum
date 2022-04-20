@@ -11,7 +11,7 @@ const emit = defineEmits<{
 const selectedSort = ref<Sort>(props.options[0])
 
 function getImageUrl(name: string): string {
-  return new URL(`../assets/images/bottles/head/${name}.png`, import.meta.url)
+  return new URL(`../assets/images/bottles/head/${name}.svg`, import.meta.url)
     .href
 }
 function selectSort(sort: Sort): void {
