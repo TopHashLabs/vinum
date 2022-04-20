@@ -62,7 +62,7 @@ watch(counter, () => {
       </div>
       <div class="basis-1/3 mobile:mt-8 flex flex-col">
         <Bottle :name="currentSort.img" />
-        <p class="text-white/50 text-center mobile:text-left">0/1000 Minted</p>
+        <p class="text-white/50 text-center mobile:text-left">0/950 Minted</p>
       </div>
       <div
         class="basis-[28%] mt-4 flex flex-col justify-center mobile:space-y-4 space-y-4"
@@ -70,7 +70,7 @@ watch(counter, () => {
         <div class="flex justify-between items-center">
           <div class="flex space-x-2 items-center">
             <img src="@/assets/images/eth.svg" alt="" />
-            <span>0.065 ETH</span>
+            <span>TBA</span>
           </div>
           <p class="font-semibold text-xl">
             {{currentSort.name}}
@@ -215,7 +215,7 @@ watch(counter, () => {
         <div
           class="bg-[#222222] relative text-white font-grotesk font-medium w-[300px] h-[58px] flex items-center rounded-[10px] justify-center mobile:w-full"
         >
-        <img class="absolute left-8 -top-8" src="@/assets/images/mystery-box.png" alt="">
+        <img class="absolute left-8 -top-8 h-[90px]" src="@/assets/images/mystery-box.png" alt="">
           Q3``22
         </div>
         <ul class="text-white mobile:text-center mobile:w-[90%] mobile:mx-auto">
@@ -244,7 +244,7 @@ watch(counter, () => {
         <div
           class="bg-[#222222] relative text-white font-grotesk font-medium w-[300px] h-[58px] flex items-center rounded-[10px] justify-center mobile:w-full"
         >
-        <img class="absolute left-8 -top-8" src="@/assets/images/mystery-box.png" alt="">
+        <img class="absolute left-8 -top-8 h-[90px]" src="@/assets/images/mystery-box.png" alt="">
           Q4``22
         </div>
       </div>

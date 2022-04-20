@@ -3,7 +3,7 @@ const props = defineProps<{
   name: string
 }>()
 const getCurrentSortImg = () => {
-  return new URL(`../assets/images/bottles/${props.name}.png`, import.meta.url)
+  return new URL(`../assets/images/bottles/${props.name}.svg`, import.meta.url)
     .href
 }
 </script>
