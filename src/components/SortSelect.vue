@@ -43,7 +43,7 @@ function selectSort(sort: Sort): void {
           }
         ]"
       >
-        <img :src="getImageUrl(option.img)" alt="" />
+        <img class="inline-block px-4" :src="getImageUrl(option.img)" alt="" />
         <input
           :value="option.amount"
           :class="[

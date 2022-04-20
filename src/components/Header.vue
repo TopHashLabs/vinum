@@ -61,8 +61,7 @@ function closeNav(): void {
       >
         <li class="cursor-pointer group">
           <a @click="closeNav" href="#about">
-
-          <span class="italic">A</span>bou<span class="italic">t</span>
+          About
           </a>
           <div
             class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"
@@ -71,7 +70,7 @@ function closeNav(): void {
         <li class="w-full border border-[#333333] hidden mobile:block"></li>
         <li class="cursor-pointer group">
           <a @click="closeNav" href="#roadmap">
-          <span class="italic mr-0.5">R</span>oadma<span class="italic">p</span>
+          Roadmap
           </a>
           <div
             class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"
@@ -80,7 +79,7 @@ function closeNav(): void {
         <li class="w-full border border-[#333333] hidden mobile:block"></li>
         <li class="cursor-pointer group">
           <a @click="closeNav" href="#genesis">
-          <span class="italic mr-0.5">G</span>enesi<span class="italic">s</span>
+          Genesis
           </a>
           <div
             class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"
@@ -89,7 +88,7 @@ function closeNav(): void {
         <li class="w-full border border-[#333333] hidden mobile:block"></li>
         <li class="cursor-pointer group">
           <a @click="closeNav" href="#holder">
-          <span class="italic mr-0.5">H</span>olde<span class="italic">r</span>
+          Holder
           </a>
           <div
             class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"
@@ -98,7 +97,7 @@ function closeNav(): void {
         <li class="w-full border border-[#333333] hidden mobile:block"></li>
         <li class="cursor-pointer group">
           <a @click="closeNav" href="#hiring">
-          <span class="italic mr-0.5">H</span>irin<span class="italic">g</span>
+         Hiring
           </a>
           <div
             class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"
@@ -107,7 +106,7 @@ function closeNav(): void {
         <li class="w-full border border-[#333333] hidden mobile:block"></li>
         <li class="cursor-pointer group">
           <a @click="closeNav" href="#team">
-          <span class="italic mr-0.5">T</span>ea<span class="italic">m</span>
+          Team
           </a>
           <div
             class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"

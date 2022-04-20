@@ -5,15 +5,21 @@ const loading = ref<boolean>(false)
 
 const sortes = reactive<Sort[]>([
   {
-    img: 'rose',
+    img: 'blue',
+    name: 'Riesling',
+    type: 'white / dry',
     amount: 0
   },
   {
-    img: 'blue',
+    img: 'rose',
+    name: 'Chardonnay',
+    type: 'white / semi-dry',
     amount: 0
   },
   {
     img: 'red',
+    name: 'Chardonnay',
+    type: 'white / semi-sweet',
     amount: 0
   }
 ])
@@ -67,13 +73,13 @@ watch(counter, () => {
             <span>0.065 ETH</span>
           </div>
           <p class="font-semibold text-xl">
-            <span class="italic">M</span>erlot
+            {{currentSort.name}}
           </p>
         </div>
         <div class="flex justify-between items-center">
           <div class="flex space-x-3 items-center">
-            <BaseDiagram :currentValue="55" />
-            <p class="italic">red / semidry</p>
+            <BaseDiagram />
+            <p class="italic">{{currentSort.type}}</p>
           </div>
           <p class="text-white/50 italic">2022</p>
         </div>
@@ -101,11 +107,7 @@ watch(counter, () => {
       </div>
       <h1 class="text-4xl font-semibold italic">Why are we here?</h1>
       <p class="text-base text-white/50 text-center mobile:text-left">
-        We are solving the interoperability between the metaverse and a real
-        world, where NFTs will represent tickets or proof-of-ownership for
-        assets in both worlds. By pioneering the movement of real business to
-        the metaverse, we want to achieve a new way of representing a real-world
-        brand with a real life product, in the new digital world.
+        We are solving the interoperability between the metaverse and a real world, where NFTs will represent tickets or proof-of-ownership for assets in both worlds. By pioneering the movement of real business to the metaverse, we want to achieve a new way of representing a real-world brand with a real life product, in the new digital world.
       </p>
     </section>
     <div class="w-full h-0.5 bg-[#333333] mt-[112px] mb-[82px] mobile:hidden block"></div>
@@ -129,10 +131,7 @@ watch(counter, () => {
           >ur vision?
         </h1>
         <p class="text-base text-white/50 text-left">
-          We want to launch an NFT collection that will serve as proof of
-          ownership of an exclusive and limited edition real asset that gets
-          more valuable as time goes, as well as digital asset deployed in the
-          metaverse.
+          Our first step is to launch an NFT collection that will serve as proof of ownership for an exclusive, and limited edition real asset that gets more valuable with time, as well as digital asset, deployed in the metaverse.
         </p>
       </div>
       <div
@@ -150,12 +149,7 @@ watch(counter, () => {
           >ur passion?
         </h1>
         <p class="text-base text-white/50 text-left">
-          We have been involved in the wine industry for years, and built a rich
-          expertise in the process of wine production. Besides that, during
-          2021, we couldn’t stay on the side-line, and kept learning about
-          blockchain, NFTs, and Web3. Realizing the potential of the use case,
-          and the potential of the market, we have decided to combine them, and
-          start building Vinum Web3.
+          We have been involved in the wine industry for years, and have a rich expertise in winemaking. During 2021, we discovered, and followed, and kept learning about Web3. Realizing the uncovered potential of this market its use case within Web3, we have to start building Vinum Web3.
         </p>
       </div>
     </section>
@@ -176,13 +170,13 @@ watch(counter, () => {
         class="flex mobile:flex-col mobile:space-x-0 mobile:items-center mobile:space-y-4 space-x-[30px] justify-start"
       >
         <div
-          class="bg-white text-black font-grotesk font-medium w-[300px] h-[58px] flex items-center rounded-[10px] justify-center mobile:w-full"
+          class="bg-[#222222] text-white font-grotesk font-medium w-[300px] h-[58px] flex items-center rounded-[10px] justify-center mobile:w-full"
         >
           Q1``22
         </div>
         <ul class="text-white">
-          <li>Concept was born</li>
-          <li>NFT design project</li>
+          <li>Project inception</li>
+          <li>Design implementation</li>
           <li>Web development</li>
         </ul>
       </div>
@@ -198,21 +192,18 @@ watch(counter, () => {
         class="flex space-x-[30px] justify-end mobile:flex-col-reverse mobile:space-x-0 mobile:items-center"
       >
         <ul class="text-white text-right mobile:text-center mobile:my-4">
-          <li>Mint</li>
-          <li>DAO creation</li>
-          <li>NFT staking</li>
-          <li>Real-life storage creation commencement</li>
-          <li class="text-[#5A81F1]">TBA</li>
+          <li>Genesis collection mint</li>
+          <li>Wine cellar construction starts</li>
         </ul>
         <div
-          class="bg-[#222222] text-white font-grotesk font-medium w-[300px] h-[58px] flex items-center rounded-[10px] justify-center mobile:w-full"
+          class="bg-white text-black font-grotesk font-medium w-[300px] h-[58px] flex items-center rounded-[10px] justify-center mobile:w-full"
         >
           Q2``22
         </div>
       </div>
-      <div class="flex flex-col mx-36 mobile:mx-4 mobile:-mt-[152px] -mt-16">
+      <div class="flex flex-col mx-36 mobile:mx-4 mobile:-mt-[80px]">
         <div
-          class="self-end border-b-[0.5px] border-r border-[#333333] rounded-br-2xl w-[98%] h-[105px] mobile:h-[145px]"
+          class="self-end border-b-[0.5px] border-r border-[#333333] rounded-br-2xl w-[98%] h-[58px] mobile:h-[88px]"
         ></div>
         <div
           class="self-start border-l border-t-[0.5px] border-[#333333] rounded-tl-2xl w-[98%] h-[58px]"
@@ -222,15 +213,16 @@ watch(counter, () => {
         class="flex mobile:flex-col mobile:space-x-0 mobile:space-y-4 space-x-[30px] justify-start mobile:items-center"
       >
         <div
-          class="bg-[#222222] text-white font-grotesk font-medium w-[300px] h-[58px] flex items-center rounded-[10px] justify-center mobile:w-full"
+          class="bg-[#222222] relative text-white font-grotesk font-medium w-[300px] h-[58px] flex items-center rounded-[10px] justify-center mobile:w-full"
         >
+        <img class="absolute left-8 -top-8" src="@/assets/images/mystery-box.png" alt="">
           Q3``22
         </div>
         <ul class="text-white mobile:text-center mobile:w-[90%] mobile:mx-auto">
-          <li>Winemaking phase starts</li>
-          <li>Wine follow up phases and finalization, including design</li>
-          <li>Real-life storage completion</li>
-          <li>Connecting NFT staking with real life storage</li>
+          <li>Winemaking starts</li>
+          <li>Token creation</li>
+          <li>NFT Staking = Token Reward</li>
+          <li>DAO development</li>
         </ul>
       </div>
       <div class="flex flex-col mx-36 mobile:mx-5 mobile:-mt-[124px]">
@@ -245,14 +237,14 @@ watch(counter, () => {
         class="flex mobile:flex-col-reverse mobile:items-center mobile:space-x-0 space-x-[30px] justify-end"
       >
         <ul class="text-white text-right mobile:text-center mobile:my-4">
-          <li>DAO proposals initiation</li>
-          <li>Next year harvest season planning</li>
-          <li>Metaverse shop development proposals initiation</li>
-          <li class="text-[#5A81F1]">TBA</li>
+          <li>DAO first proposal</li>
+          <li>NFT burn & Delivery</li>
+          <li>NFT Staking = Wine Staking</li>
         </ul>
         <div
-          class="bg-[#222222] text-white font-grotesk font-medium w-[300px] h-[58px] flex items-center rounded-[10px] justify-center mobile:w-full"
+          class="bg-[#222222] relative text-white font-grotesk font-medium w-[300px] h-[58px] flex items-center rounded-[10px] justify-center mobile:w-full"
         >
+        <img class="absolute left-8 -top-8" src="@/assets/images/mystery-box.png" alt="">
           Q4``22
         </div>
       </div>
@@ -273,8 +265,8 @@ watch(counter, () => {
           Q1``23
         </div>
         <ul class="text-white mobile:text-center">
-          <li>NFT mint - funding round (new year cycle)</li>
-          <li>Wine production phase restarts</li>
+          <li>NFT mint - funding round</li>
+          <li>Related to new year harvest</li>
         </ul>
       </div>
     </section>
@@ -304,22 +296,22 @@ watch(counter, () => {
           <li
             class="bg-white font-grotesk mobile:text-center text-xl text-black font-medium px-6 py-4 rounded-[10px]"
           >
-            Total supply 10,000
+            Total supply 8,000
           </li>
           <li
             class="relative font-grotesk bg-[#101010] mobile:text-center text-xl text-white font-medium px-6 py-4 rounded-[10px]"
           >
-            10 wine types
+            Editions vary by type
             <div
               class="absolute transform rotate-[3.68deg] -top-3 -right-7 mobile:right-1/3 text-sm py-0.5 px-2.5 bg-gradient-to-tr to-[#8F51FF] from-[#FF1B60] rounded-md text-center"
             >
-              1000 editions each
+              10 wine types
             </div>
           </li>
           <li
             class="bg-white font-grotesk mobile:text-center text-xl text-black font-medium px-6 py-4 rounded-[10px]"
           >
-            Embeded DAO voting rights
+            DAO voting right
           </li>
           <li
             class="bg-white font-grotesk mobile:text-center text-xl text-black font-medium px-6 py-4 rounded-[10px]"
@@ -370,7 +362,10 @@ watch(counter, () => {
           </p>
         </div>
         <div class="basis-1/4 flex flex-col items-start mobile:items-center">
+        <div class="flex items-center">
           <img src="@/assets/images/stacking.svg" alt="" />
+          <img class="ml-2 h-[70px]" src="@/assets/images/mystery-box.png" alt="">
+        </div>
           <h2 class="mt-[18px] mb-[8px] text-2xl font-medium font-grotesk">
             NFT Staking
           </h2>
@@ -381,7 +376,10 @@ watch(counter, () => {
           </p>
         </div>
         <div class="basis-1/4 flex flex-col items-start mobile:items-center">
+        <div class="flex items-center">
           <img src="@/assets/images/burn.svg" alt="" />
+          <img class="ml-2 h-[70px]" src="@/assets/images/mystery-box.png" alt="">
+        </div>
           <h2 class="mt-[18px] mb-[8px] text-2xl font-medium font-grotesk">
             NFT Burn
           </h2>
@@ -391,7 +389,10 @@ watch(counter, () => {
           </p>
         </div>
         <div class="basis-1/4 flex flex-col items-start mobile:items-center">
+        <div class="flex items-center">
           <img src="@/assets/images/dao.svg" alt="" />
+          <img class="ml-2 h-[70px]" src="@/assets/images/mystery-box.png" alt="">
+        </div>
           <h2 class="mt-[18px] mb-[8px] text-2xl font-medium font-grotesk">
             NFT = DAO voting right
           </h2>
@@ -408,7 +409,7 @@ watch(counter, () => {
     <section>
       <img
         class="mobile:h-[280px] mx-auto"
-        src="@/assets/images/tba.svg"
+        src="@/assets/images/tba.png"
         alt=""
       />
     </section>
@@ -424,22 +425,22 @@ watch(counter, () => {
         <div
           class="flex mobile:flex-col space-x-[30px] mobile:space-y-[45px] mobile:space-x-0 basis-1/2 mobile:basis-full"
         >
-          <div class="text-center w-full">
             <div
-              class="mb-3 py-4 bg-white rounded-[10px] text-xl font-medium font-grotesk text-black"
+              class="flex justify-center w-full space-x-3.5 py-4 bg-white rounded-[10px] text-xl font-medium font-grotesk text-black"
             >
+              <img src="@/assets/images/social/discord.svg" alt="">
+              <span>
               Community manager
+              </span>
             </div>
-            <div class="text-white/50">Twitter</div>
-          </div>
-          <div class="text-center w-full">
             <div
-              class="mb-3 py-4 bg-white rounded-[10px] text-xl font-medium font-grotesk text-black"
+              class="flex justify-center w-full space-x-3.5 py-4 bg-white rounded-[10px] text-xl font-medium font-grotesk text-black"
             >
+              <img src="@/assets/images/social/twitter.svg" alt="">
+              <span>
               Marketing manager
+              </span>
             </div>
-            <div class="text-white/50">Twitter</div>
-          </div>
         </div>
         <div
           class="mobile:pt-[70px] flex flex-col space-y-8 basis-1/3 mobile:basis-full mx-auto text-white/50 text-base font-normal"
@@ -465,59 +466,110 @@ watch(counter, () => {
       class="w-full h-0.5 bg-[#333333] mobile:mt-[160px] mobile:mb-[80px] mt-[130px] mb-[100px]"
       id="team"
     ></div>
-    <section class="flex flex-col max-w-[850px] mx-auto items-center">
+    <section class="flex flex-col mx-auto items-center">
       <div
         class="text-sm font-grotesk py-0.5 px-2.5 bg-gradient-to-tr to-[#8F51FF] from-[#FF1B60] rounded-md text-center"
       >
         Vinum
       </div>
       <h1 class="text-4xl font-semibold mt-5 mb-[60px]">
-        <span class="italic">T</span>eam
+        Executive
       </h1>
       <div
-        class="flex mobile:flex-col mobile:space-y-[64px] justify-between items-center w-full"
+        class="flex max-w-[1000px] mobile:flex-col mobile:space-y-[64px] justify-between items-center w-full"
       >
         <div class="flex flex-col items-center space-y-8">
-          <img src="@/assets/images/team/kim.svg" alt="" />
+          <img src="@/assets/images/team/tamer.png" alt="" />
           <div class="text-center flex flex-col items-center space-y-2">
-            <h1 class="text-lg font-semibold">Jaden Kim</h1>
-            <p class="text-base font-normal text-white/50">Designer</p>
-            <div class="flex items-center space-x-2">
+            <h1 class="text-lg font-semibold">Tamer</h1>
+            <p class="text-base font-normal text-white/50">Co-founder</p>
+            <a href="http://twitter.com/#!/MrGfollower" target="_blank" class="flex items-center space-x-2">
               <img src="@/assets/images/social/white/twitter.svg" alt="" />
-              <a class="">@kim_j</a>
-            </div>
+              <span class="">@MrGfollower</span>
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col items-center space-y-8">
+          <img src="@/assets/images/team/chris.png" alt="" />
+          <div class="text-center flex flex-col items-center space-y-2">
+            <h1 class="text-lg font-semibold">Chris</h1>
+            <p class="text-base font-normal text-white/50">Co-founder</p>
+            <a href="http://twitter.com/#!/cristianskiETH" target="_blank" class="flex items-center space-x-2">
+              <img src="@/assets/images/social/white/twitter.svg" alt="" />
+              <span>@cristianskiETH</span>
+            </a>
           </div>
         </div>
         <div class="flex flex-col items-center space-y-8">
           <img src="@/assets/images/team/kim.svg" alt="" />
           <div class="text-center flex flex-col items-center space-y-2">
-            <h1 class="text-lg font-semibold">Jaden Kim</h1>
-            <p class="text-base font-normal text-white/50">Designer</p>
-            <div class="flex items-center space-x-2">
+            <h1 class="text-lg font-semibold">Sarmat</h1>
+            <p class="text-base font-normal text-white/50">Tech Lead</p>
+            <a href="http://twitter.com/#!/sarmatdev" target="_blank" class="flex items-center space-x-2">
               <img src="@/assets/images/social/white/twitter.svg" alt="" />
-              <a>@kim_j</a>
-            </div>
+              <span>@sarmatdev</span>
+            </a>
           </div>
         </div>
         <div class="flex flex-col items-center space-y-8">
           <img src="@/assets/images/team/kim.svg" alt="" />
           <div class="text-center flex flex-col items-center space-y-2">
-            <h1 class="text-lg font-semibold">Jaden Kim</h1>
-            <p class="text-base font-normal text-white/50">Designer</p>
-            <div class="flex items-center space-x-2">
+            <h1 class="text-lg font-semibold">Alan</h1>
+            <p class="text-base font-normal text-white/50">Blockchain & Web Dev.</p>
+            <a href="http://twitter.com/#!/AlanDev_" target="_blank" class="flex items-center space-x-2">
               <img src="@/assets/images/social/white/twitter.svg" alt="" />
-              <a>@kim_j</a>
-            </div>
+              <span>@AlanDev_</span>
+            </a>
           </div>
         </div>
       </div>
-      <p class="text-center text-white/50 mb-[164px] mt-[86px]">
+      <div class="flex flex-col mobile:flex-col-reverse">
+      <p class="text-center px-[220px] mobile:px-0 text-white/50  mt-[86px] mb-[60px] border-t border-b py-[50px] w-full mobile:border-b-0">
         We are a small team of seven open-minded friends that has overall
         expertise in design, wine business, financial industry, WEB3
         development. We do share the common belief in the bright future of WEB3,
         and the deployment & transition of conventional businesses onto the
         decentralized world.
       </p>
+      <div
+        class="flex max-w-[1000px] mobile:flex-col mobile:space-y-[64px] justify-between items-start mobile:items-center w-full mb-[164px] mobile:mb-[68px]"
+      >
+      <h1 class="text-4xl font-semibold self-start mobile:self-center mobile:mt-14">Creative</h1>
+        <div class="flex flex-col items-center space-y-8">
+          <img src="@/assets/images/team/kim.svg" alt="" />
+          <div class="text-center flex flex-col items-center space-y-2">
+            <h1 class="text-lg font-semibold">Azamaz</h1>
+            <p class="text-base font-normal text-white/50">3D designer</p>
+            <a href="http://twitter.com/#!/indrarakeln06" target="_blank" class="flex items-center space-x-2">
+              <img src="@/assets/images/social/white/twitter.svg" alt="" />
+              <span class="">@indrarakeln06</span>
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col items-center space-y-8">
+          <img src="@/assets/images/team/placeholder.png" alt="" />
+          <div class="text-center flex flex-col items-center space-y-2">
+            <h1 class="text-lg font-semibold">Sofia</h1>
+            <p class="text-base font-normal text-white/50">Product Designer</p>
+            <a href="http://twitter.com/#!/cristianskiETH" target="_blank" class="flex items-center space-x-2">
+              <img src="@/assets/images/social/white/twitter.svg" alt="" />
+              <span>@gerdtgerdt</span>
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col items-center space-y-8">
+          <img src="@/assets/images/team/yana.png" alt="" />
+          <div class="text-center flex flex-col items-center space-y-2">
+            <h1 class="text-lg font-semibold">Yana</h1>
+            <p class="text-base font-normal text-white/50">UI/UX Designer</p>
+            <a href="http://twitter.com/#!/sarmatdev" target="_blank" class="flex items-center space-x-2">
+              <img src="@/assets/images/social/white/twitter.svg" alt="" />
+              <span>@gerdtgerdt</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
     </section>
   </div>
 </template>

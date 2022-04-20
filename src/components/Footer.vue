@@ -6,36 +6,24 @@
           <img class="mb-9" src="@/assets/images/logo-dark.svg" alt="" />
           <SocialList color="black" />
         </div>
-        <div class="basis-1/4 flex flex-col space-y-4 text-sm font-medium">
+        <div class="basis-1/4 grid grid-rows-3 grid-flow-col mobile:flex mobile:flex-col mobile:space-y-4 text-sm font-medium">
           <a href="#about" class="cursor-pointer">
-            <span class="italic">A</span>bou<span class="italic"
-              >t</span
-            >
+            About
           </a>
           <a href="#roadmap" class="cursor-pointer">
-            <span class="italic mr-0.5">R</span>oadma<span class="italic"
-              >p</span
-            >
+            Roadmap
           </a>
           <a href="#genesis" class="cursor-pointer">
-            <span class="italic mr-0.5">G</span>enesi<span class="italic"
-              >s</span
-            >
+            Genesis
           </a>
           <a href="#holder" class="cursor-pointer">
-            <span class="italic mr-0.5">H</span>olde<span class="italic"
-              >r</span
-            >
+            Holder
           </a>
           <a href="#hiring" class="cursor-pointer">
-            <span class="italic mr-0.5">H</span>irin<span class="italic"
-              >g</span
-            >
+            Hiring
           </a>
           <a href="#team" class="cursor-pointer">
-            <span class="italic mr-0.5">T</span>ea<span class="italic"
-              >m</span
-            >
+            Team
           </a>
         </div>
         <a href="mailto:vinumw3@gmail.com" class="text-lg font-medium"

@@ -23,7 +23,7 @@ function decrementValue(number: number): number {
     class="flex justify-center items-center rounded-full py-2 w-full bg-[#1C1C1C]"
   >
     <button
-      class="text-2xl text-transparent bg-clip-text bg-gradient-to-tr to-[#8F51FF] from-[#FF1B60]"
+      :class="['text-2xl text-transparent bg-clip-text bg-gradient-to-tr to-[#8F51FF] from-[#FF1B60]',{'cursor-not-allowed': modelValue <= 0}]"
       @click="emit('update:modelValue', decrementValue(modelValue))"
       :disabled="modelValue <= 0"
     >
