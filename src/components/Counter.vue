@@ -23,11 +23,11 @@ function decrementValue(number: number): number {
     class="flex justify-center items-center rounded-full py-2 w-full bg-[#1C1C1C]"
   >
     <button
-      :class="['text-2xl text-gradient',{'cursor-not-allowed': modelValue <= 0}]"
+      :class="['text-2xl text-gradient p-2',{'cursor-not-allowed': modelValue <= 0}]"
       @click="emit('update:modelValue', decrementValue(modelValue))"
       :disabled="modelValue <= 0"
     >
-      -
+      <img src="@/assets/images/-.svg" alt="">
     </button>
     <input
       :value="modelValue"
@@ -37,21 +37,10 @@ function decrementValue(number: number): number {
       readonly
     />
     <button
-      class="text-2xl text-gradient"
+      class="text-2xl p-2 text-gradient"
       @click="emit('update:modelValue', incrementValue(modelValue))"
     >
-      +
+      <img src="@/assets/images/+.svg" alt="">
     </button>
   </div>
 </template>
-<style>
-.text-gradient {
-  background: linear-gradient(253.4deg, #8F51FF 8.24%, #FF1B60 87.82%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-</style>
