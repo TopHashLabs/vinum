@@ -484,7 +484,7 @@ watch(counter, () => {
         <div class="flex flex-col items-center space-y-8">
           <img src="@/assets/images/team/tamer.png" alt="" />
           <div class="text-center flex flex-col items-center space-y-2">
-            <h1 class="text-lg font-semibold">Tamer</h1>
+            <h1 class="text-lg font-semibold">BASIL</h1>
             <p class="text-base font-normal text-white/50">Co-founder</p>
             <a href="http://twitter.com/#!/MrGfollower" target="_blank" class="flex items-center space-x-2">
               <img src="@/assets/images/social/white/twitter.svg" alt="" />
@@ -495,7 +495,7 @@ watch(counter, () => {
         <div class="flex flex-col items-center space-y-8">
           <img src="@/assets/images/team/chris.png" alt="" />
           <div class="text-center flex flex-col items-center space-y-2">
-            <h1 class="text-lg font-semibold">Chris</h1>
+            <h1 class="text-lg font-semibold">CHRIS</h1>
             <p class="text-base font-normal text-white/50">Co-founder</p>
             <a href="http://twitter.com/#!/cristianskiETH" target="_blank" class="flex items-center space-x-2">
               <img src="@/assets/images/social/white/twitter.svg" alt="" />
@@ -506,7 +506,7 @@ watch(counter, () => {
         <div class="flex flex-col items-center space-y-8">
           <img src="@/assets/images/team/kim.svg" alt="" />
           <div class="text-center flex flex-col items-center space-y-2">
-            <h1 class="text-lg font-semibold">Sarmat</h1>
+            <h1 class="text-lg font-semibold">SAM</h1>
             <p class="text-base font-normal text-white/50">Tech Lead</p>
             <a href="http://twitter.com/#!/sarmatdev" target="_blank" class="flex items-center space-x-2">
               <img src="@/assets/images/social/white/twitter.svg" alt="" />
@@ -517,11 +517,11 @@ watch(counter, () => {
         <div class="flex flex-col items-center space-y-8">
           <img src="@/assets/images/team/kim.svg" alt="" />
           <div class="text-center flex flex-col items-center space-y-2">
-            <h1 class="text-lg font-semibold">Alan</h1>
+            <h1 class="text-lg font-semibold">AL</h1>
             <p class="text-base font-normal text-white/50">Blockchain & Web Dev.</p>
-            <a href="http://twitter.com/#!/AlanDev_" target="_blank" class="flex items-center space-x-2">
+            <a href="http://twitter.com/#!/aldev23" target="_blank" class="flex items-center space-x-2">
               <img src="@/assets/images/social/white/twitter.svg" alt="" />
-              <span>@AlanDev_</span>
+              <span>@aldev23</span>
             </a>
           </div>
         </div>
@@ -541,7 +541,7 @@ watch(counter, () => {
         <div class="flex flex-col items-center space-y-8">
           <img src="@/assets/images/team/kim.svg" alt="" />
           <div class="text-center flex flex-col items-center space-y-2">
-            <h1 class="text-lg font-semibold">Azamaz</h1>
+            <h1 class="text-lg font-semibold">Aza</h1>
             <p class="text-base font-normal text-white/50">3D designer</p>
             <a href="http://twitter.com/#!/indrarakeln06" target="_blank" class="flex items-center space-x-2">
               <img src="@/assets/images/social/white/twitter.svg" alt="" />
@@ -552,12 +552,12 @@ watch(counter, () => {
         <div class="flex flex-col items-center space-y-8">
           <img src="@/assets/images/team/placeholder.png" alt="" />
           <div class="text-center flex flex-col items-center space-y-2">
-            <h1 class="text-lg font-semibold">Sofia</h1>
+            <h1 class="text-lg font-semibold">Sofie</h1>
             <p class="text-base font-normal text-white/50">Product Designer</p>
-            <a href="http://twitter.com/#!/cristianskiETH" target="_blank" class="flex items-center space-x-2">
+            <!-- <a href="http://twitter.com/#!/cristianskiETH" target="_blank" class="flex items-center space-x-2">
               <img src="@/assets/images/social/white/twitter.svg" alt="" />
               <span>@gerdtgerdt</span>
-            </a>
+            </a> -->
           </div>
         </div>
         <div class="flex flex-col items-center space-y-8">
@@ -565,10 +565,10 @@ watch(counter, () => {
           <div class="text-center flex flex-col items-center space-y-2">
             <h1 class="text-lg font-semibold">Yana</h1>
             <p class="text-base font-normal text-white/50">UI/UX Designer</p>
-            <a href="http://twitter.com/#!/sarmatdev" target="_blank" class="flex items-center space-x-2">
+            <!-- <a href="http://twitter.com/#!/sarmatdev" target="_blank" class="flex items-center space-x-2">
               <img src="@/assets/images/social/white/twitter.svg" alt="" />
               <span>@gerdtgerdt</span>
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
