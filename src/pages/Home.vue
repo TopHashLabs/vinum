@@ -53,9 +53,9 @@ watch(counter, () => {
             >me to the future
           </h1>
           <p class="text-3xl mobile:text-xl">
-            where the <span class="italic mr-0.5">f</span>rontier between
+            where the frontier between
             <span class="text-[#537FFF] italic">real-world & metaverse</span>
-            assets <span class="italic mr-0.5">d</span>isappears.
+            assets disappears.
           </p>
         </div>
         <SocialList class="mt-20 mobile:hidden" />
@@ -282,7 +282,7 @@ watch(counter, () => {
     >
       <div class="p-14 mobile:py-7 mobile:-mb-44 mobile:px-3">
         <h1 class="text-black text-4xl font-medium mb-9 mobile:max-w-[245px]">
-          <span class="italic mr-0.5">G</span>enesis
+          Genesis
           <span class="italic">NFT</span> c<span
             class="inline-block border-4 border-black rounded-full w-[51px] h-[23px]"
           ></span
