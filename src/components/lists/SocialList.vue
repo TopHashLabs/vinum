@@ -20,7 +20,9 @@ function getImageUrl(name: string): string {
     <li
       class="cursor-pointer hover:transform hover:scale-125 hover:transition-transform hover:duration-300"
     >
-      <img :src="getImageUrl('twitter')" alt="" />
+      <a href="https://twitter.com/vinum_web3" target="_blank">
+        <img :src="getImageUrl('twitter')" alt="" />
+      </a>
     </li>
     <li
       class="cursor-pointer hover:transform hover:scale-125 hover:transition-transform hover:duration-300"
@@ -32,7 +34,7 @@ function getImageUrl(name: string): string {
     <li
       class="cursor-pointer hover:transform hover:scale-125 hover:transition-transform hover:duration-300"
     >
-      <a href="" target="_blank">
+      <a href="https://t.me/vinumweb3" target="_blank">
         <img :src="getImageUrl('telegram')" alt="" />
       </a>
     </li>

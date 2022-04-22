@@ -12,7 +12,10 @@ withDefaults(
 </script>
 <template>
   <button
-    :class="['p-0.5 cursor-pointer w-full rounded-full bg-gradient-to-tr to-[#8F51FF] from-[#FF1B60]',{'cursor-not-allowed': disabled}]"
+    :class="[
+      'p-0.5 cursor-pointer w-full rounded-full bg-gradient-to-tr to-[#8F51FF] from-[#FF1B60]',
+      { 'cursor-not-allowed': disabled }
+    ]"
   >
     <div
       class="bg-main rounded-full flex justify-center items-center py-2.5 text-base font-semibold"

@@ -1,5 +1,7 @@
 <template>
-  <div :class="`relative rounded-full transform rotate-[5deg]  w-5 h-5 ${pieClasses}`">
+  <div
+    :class="`relative rounded-full transform rotate-[5deg]  w-5 h-5 ${pieClasses}`"
+  >
     <div
       class="absolute z-10 inset-0 w-[20.5px] h-[20.5px] rounded-full"
       :style="pieStyles"

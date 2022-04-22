@@ -16,7 +16,11 @@ function closeNav(): void {
       }
     ]"
   >
-    <img src="@/assets/images/logo.png" class="h-[26px] mobile:h-[36px] z-[60]" alt="" />
+    <img
+      src="@/assets/images/logo.png"
+      class="h-[26px] mobile:h-[36px] z-[60]"
+      alt=""
+    />
     <div
       @click="toggleNav"
       class="hidden mobile:flex w-10 h-10 rounded-full bg-gray cursor-pointer justify-center items-center"
@@ -60,54 +64,42 @@ function closeNav(): void {
         class="flex mobile:flex-col mobile:justify-between space-x-12 mobile:space-y-3 mobile:space-x-0"
       >
         <li class="cursor-pointer group">
-          <a @click="closeNav" href="#about">
-          About
-          </a>
+          <a @click="closeNav" href="#about"> About </a>
           <div
             class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"
           ></div>
         </li>
         <li class="w-full border border-[#333333] hidden mobile:block"></li>
         <li class="cursor-pointer group">
-          <a @click="closeNav" href="#roadmap">
-          Roadmap
-          </a>
+          <a @click="closeNav" href="#roadmap"> Roadmap </a>
           <div
             class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"
           ></div>
         </li>
         <li class="w-full border border-[#333333] hidden mobile:block"></li>
         <li class="cursor-pointer group">
-          <a @click="closeNav" href="#genesis">
-          Genesis
-          </a>
+          <a @click="closeNav" href="#genesis"> Genesis </a>
           <div
             class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"
           ></div>
         </li>
         <li class="w-full border border-[#333333] hidden mobile:block"></li>
         <li class="cursor-pointer group">
-          <a @click="closeNav" href="#holder">
-          Holder
-          </a>
+          <a @click="closeNav" href="#holder"> Holder </a>
           <div
             class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"
           ></div>
         </li>
         <li class="w-full border border-[#333333] hidden mobile:block"></li>
         <li class="cursor-pointer group">
-          <a @click="closeNav" href="#hiring">
-         Hiring
-          </a>
+          <a @click="closeNav" href="#hiring"> Hiring </a>
           <div
             class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"
           ></div>
         </li>
         <li class="w-full border border-[#333333] hidden mobile:block"></li>
         <li class="cursor-pointer group">
-          <a @click="closeNav" href="#team">
-          Team
-          </a>
+          <a @click="closeNav" href="#team"> Team </a>
           <div
             class="bg-white mobile:hidden h-px transition-all duration-500 w-0 group-hover:w-full"
           ></div>
