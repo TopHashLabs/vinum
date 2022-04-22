@@ -11,7 +11,7 @@ const emit = defineEmits<{
 const selectedSort = ref<Sort>(props.options[0])
 
 function getImageUrl(name: string): string {
-  return new URL(`../assets/images/bottles/head/${name}.svg`, import.meta.url)
+  return new URL(`../assets/images/bottles/head/${name}.png`, import.meta.url)
     .href
 }
 function selectSort(sort: Sort): void {
@@ -43,7 +43,7 @@ function selectSort(sort: Sort): void {
           }
         ]"
       >
-        <img class="inline-block px-4" :src="getImageUrl(option.img)" alt="" />
+        <img class="inline-block px-2 h-[39px] " :src="getImageUrl(option.img)" alt="" />
         <input
           :value="option.amount"
           :class="[

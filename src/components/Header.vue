@@ -10,13 +10,13 @@ function closeNav(): void {
 <template>
   <div
     :class="[
-      'flex items-center mobile:items-start justify-between py-[18px]  mobile:py-3 max-w-[1110px] mobile:max-w-full',
+      'flex items-center justify-between py-[18px]  mobile:items-start mobile:py-3 max-w-[1110px] mobile:max-w-full',
       {
         'fixed z-50 bg-main inset-0 mobile:px-6': navOpen
       }
     ]"
   >
-    <img src="@/assets/images/logo.svg" class="mobile:w-[47px] z-[60]" alt="" />
+    <img src="@/assets/images/logo.png" class="h-[26px] mobile:h-[36px] z-[60]" alt="" />
     <div
       @click="toggleNav"
       class="hidden mobile:flex w-10 h-10 rounded-full bg-gray cursor-pointer justify-center items-center"

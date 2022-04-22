@@ -54,7 +54,7 @@ watch(counter, () => {
           </h1>
           <p class="text-3xl mobile:text-xl">
             where the frontier between
-            <span class="text-[#537FFF] italic">real-world & metaverse</span>
+            <span class="text-[#537FFF] italic">real-world & web3</span>
             assets disappears.
           </p>
         </div>
@@ -329,13 +329,13 @@ watch(counter, () => {
         </ul>
       </div>
       <img
-        class="absolute mobile:hidden right-0 bottom-0 rounded-br-[20px]"
-        src="@/assets/images/wine-mockup.svg"
+        class="absolute mobile:hidden right-0 bottom-0 rounded-br-[20px] h-[322px]"
+        src="@/assets/images/wine-mockup.png"
         alt=""
       />
       <img
         class="hidden mobile:block rounded-br-[20px]"
-        src="@/assets/images/wine-mockup-mobile.svg"
+        src="@/assets/images/wine-mockup-mobile.png"
         alt=""
       />
     </section>
