@@ -54,8 +54,7 @@ watch(counter, () => {
           </h1>
           <p class="text-3xl mobile:text-xl">
             where the frontier between
-            <span class="text-[#537FFF] italic">real-world & web3</span>
-            assets disappears.
+            <span class="text-[#537FFF] italic">real-world & web3</span> disappears.
           </p>
         </div>
         <SocialList class="mt-20 mobile:hidden" />
