@@ -508,9 +508,9 @@ watch(counter, () => {
           <div class="text-center flex flex-col items-center space-y-2">
             <h1 class="text-lg font-semibold">SAM</h1>
             <p class="text-base font-normal text-white/50">Tech Lead</p>
-            <a href="http://twitter.com/#!/sarmatdev" target="_blank" class="flex items-center space-x-2">
+            <a href="http://twitter.com/#!/0xSam_Vertigo" target="_blank" class="flex items-center space-x-2">
               <img src="@/assets/images/social/white/twitter.svg" alt="" />
-              <span>@sarmatdev</span>
+              <span>@0xSam_Vertigo</span>
             </a>
           </div>
         </div>
