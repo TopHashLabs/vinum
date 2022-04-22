@@ -33,7 +33,7 @@ const sliderClasses = computed(() => {
         <Bottle name="blue" class="w-full" />
       </div>
       <div class="w-full relative flex justify-center">
-        <div class="absolute -left-6 mobile:left-2 top-16 flex flex-col">
+        <div class="absolute -left-6 mobile:left-4 top-16 flex flex-col">
           <div class="flex space-x-[5px] items-center">
             <BaseDiagram  :currentValue="59" />
             <p class="italic mobile:text-xs">white / semi-dry</p>

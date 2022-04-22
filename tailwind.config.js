@@ -21,7 +21,7 @@ module.exports = {
         bottle: 'url("@/assets/images/bg-bottle.png")'
       },
       screens: {
-        mobile: { max: '768px' },
+        mobile: { max: '429px' },
         desktop: { min: '1025px' }
       },
       keyframes: {
