@@ -599,16 +599,16 @@ watch(counter, () => {
             <div class="flex flex-col items-center space-y-8">
               <img src="@/assets/images/team/otska.png" alt="" />
               <div class="text-center flex flex-col items-center space-y-2">
-                <h1 class="text-lg font-semibold">OTSKA</h1>
+                <h1 class="text-lg font-semibold">ATSA</h1>
                 <p class="text-base font-normal text-white/50">3D designer</p>
-                <a
+                <!-- <a
                   href="https://www.instagram.com/otska.eth/"
                   target="_blank"
                   class="flex items-center space-x-2"
                 >
                   <img src="@/assets/images/social/insta.svg" alt="" />
                   <span class="">@otska.eth</span>
-                </a>
+                </a> -->
               </div>
             </div>
             <div class="flex flex-col items-center space-y-8">
