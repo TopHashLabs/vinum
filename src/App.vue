@@ -518,15 +518,15 @@ watch(counter, () => {
           <div class="flex flex-col items-center space-y-8">
             <img src="@/assets/images/team/tamer.png" alt="" />
             <div class="text-center flex flex-col items-center space-y-2">
-              <h1 class="text-lg font-semibold">BASIL</h1>
+              <h1 class="text-lg font-semibold">BAZIL</h1>
               <p class="text-base font-normal text-white/50">Co-founder</p>
               <a
-                href="http://twitter.com/#!/@fred_basil08"
+                href="http://twitter.com/#!/fred_bazil"
                 target="_blank"
                 class="flex items-center space-x-2"
               >
                 <img src="@/assets/images/social/white/twitter.svg" alt="" />
-                <span class="">@@fred_basil08</span>
+                <span class="">@fred_bazil</span>
               </a>
             </div>
           </div>
