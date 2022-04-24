@@ -32,7 +32,6 @@ const pieClasses = computed(() => {
       return `bg-gradient-to-tr to-[#18C8FF] from-[#0057FF]`
   }
 })
-console.log('cls', pieClasses.value)
 const pieStyles = computed(() => {
   let valuePercent = (props.maxValue * props.currentValue) / 100
   let remainder = 100 - valuePercent

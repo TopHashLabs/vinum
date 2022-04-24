@@ -1,25 +1,10 @@
 <script setup lang="ts">
-const currentSlide = ref(1)
-function selectSlide(slide) {
-  currentSlide.value = slide
-}
-const sliderClasses = computed(() => {
-  switch (currentSlide.value) {
-    case 1:
-      return `transform translate-x-[-1%]`
-    case 2:
-      return ` transform translate-x-[-35%]`
-    case 3:
-      return ` transform translate-x-[-68%]`
-    default:
-      return `transform translate-x-[-2%]`
-  }
-})
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 </script>
 <template>
   <div>
     <div
-      :class="`flex mobile:justify-between mobile:relative  mobile:w-[320%] transition-transform duration-500 ${sliderClasses}`"
+      class="mobile:hidden flex "
     >
       <div class="w-full relative flex justify-center">
         <div class="absolute left-12 mobile:left-2 bottom-10 flex flex-col">
@@ -63,21 +48,55 @@ const sliderClasses = computed(() => {
         <Bottle name="red" class="w-full" />
       </div>
     </div>
-    <div
-      class="mobile:flex mobile:space-x-5 mobile:justify-center mobile:mt-10 hidden"
-    >
-      <button
-        v-for="idx of 3"
-        :key="idx"
-        @click="selectSlide(idx)"
-        :disabled="idx === currentSlide"
-        :class="[
-          'h-2 w-2 rounded-full border',
-          idx === currentSlide
-            ? 'bg-[#537FFF] border-[#537FFF]'
-            : 'border-white'
-        ]"
-      ></button>
-    </div>
+    <Carousel :autoplay="3000" :wrap-around="true" :transition="900" class="mobile:block hidden">
+      <Slide class="w-full relative flex justify-center">
+        <div class="absolute left-2 bottom-10 flex flex-col">
+          <div class="flex space-x-[5px] items-center">
+            <BaseDiagram />
+            <p class="italic mobile:text-xs">white / dry</p>
+          </div>
+          <div class="my-2 h-px bg-[#333333] w-36 mobile:w-32"></div>
+          <p class="font-grotesk font-medium self-start text-lg">
+            Riesling
+          </p>
+        </div>
+        <Bottle name="blue" class="w-full" />
+      </Slide>
+      <Slide class="w-full relative flex justify-center">
+        <div class="absolute left-0 top-16 flex flex-col">
+          <div class="flex space-x-[5px] items-center">
+            <BaseDiagram :currentValue="59" />
+            <p class="text-xs">white / semi-dry</p>
+          </div>
+          <div class="my-2 h-px bg-[#333333] w-44"></div>
+          <p class="font-grotesk font-medium text-lg self-start">
+            Chardonnay
+          </p>
+        </div>
+        <Bottle name="rose" class="w-full" />
+      </Slide>
+      <Slide class="w-full relative flex justify-center">
+        <div
+          class="absolute right-2 top-10 flex flex-col items-end"
+        >
+          <div class="flex space-x-[5px] items-center">
+            <BaseDiagram color="red" :currentValue="59" />
+            <p class="italic text-xs">white / semi-sweet</p>
+          </div>
+          <div class="my-2 h-px bg-[#333333] w-48 mobile:w-48"></div>
+          <p class="font-grotesk font-medium text-lg ">
+            Chardonnay
+          </p>
+        </div>
+        <Bottle name="red" class="w-full" />
+      </Slide>
+    <template #addons>
+      <Pagination />
+    </template>
+    </Carousel>
   </div>
+
 </template>
+
+<style>
+</style>

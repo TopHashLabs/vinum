@@ -6,6 +6,8 @@ import VueGtag from "vue-gtag";
 import './assets/styles/tailwind.css'
 import './assets/styles/fonts.css'
 import './assets/styles/main.css'
+import 'vue3-carousel/dist/carousel.css'
+import './assets/styles/fix-vueslider.css'
 import { createPinia } from 'pinia'
 
 const app = createApp(App)

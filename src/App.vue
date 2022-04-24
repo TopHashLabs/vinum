@@ -126,7 +126,7 @@ watch(counter, () => {
       <div
         class="w-full h-0.5 bg-[#333333] mt-[112px] mb-[82px] mobile:hidden block"
       ></div>
-      <Slider />
+      <Slider class="mobile:mt-24" />
       <section
         id="concept"
         class="flex mobile:flex-col space-x-[140px] mobile:space-x-0 mobile:space-y-[115px] mt-56 mobile:mt-24 items-start"
