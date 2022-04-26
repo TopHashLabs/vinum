@@ -80,7 +80,7 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
             <BaseDiagram color="red" :currentValue="59" />
             <p class="italic text-xs">white / semi-sweet</p>
           </div>
-          <div class="my-2 h-px bg-[#333333] w-48 mobile:w-48"></div>
+          <div class="my-2 h-px bg-[#333333] w-44"></div>
           <p class="font-grotesk font-medium text-lg">Chardonnay</p>
         </div>
         <Bottle name="red" class="w-full" />
