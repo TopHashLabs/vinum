@@ -491,9 +491,9 @@ watch(counter, () => {
             <p>
               Do not hesitate to mail us at
               <a
-                href="mailto:vinumw3@gmail.com"
+                href="mailto:vinumweb3@gmail.com"
                 class="text-white italic underline"
-                >vinumw3@gmail.com</a
+                >vinumweb3@gmail.com</a
               >
               with a simplified resume, a short description of yourself, and
               indicate the position you want to apply for.
